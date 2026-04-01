@@ -37,16 +37,50 @@ app.get('/api/location', (req, res) => {
       .json({ error: 'No data found for this location' })
   }
 
+  const getCsvValue = (row, key) => {
+    if (!row) return null
+    const raw = row?.[key]
+    if (typeof raw !== 'string') return null
+    const trimmed = raw.trim()
+    return trimmed ? trimmed : null
+  }
+
   const responseBody = {
-    country: nationalRow?.['Country'] ?? null,
-    iso: nationalRow?.['ISO'] ?? null,
-    corporate_tax: nationalRow?.['Corporate Tax'] ?? null,
-    vat: nationalRow?.['VAT/Sales Tax'] ?? null,
-    dividend_tax_resident: nationalRow?.['Res. Dividend Tax'] ?? null,
-    dividend_tax_nonresident: nationalRow?.['Non-Res. Dividend Tax'] ?? null,
-    population_2024: nationalRow?.['2024 Population'] ?? null,
-    population_change: nationalRow?.['10yr Pop Change'] ?? null,
-    democracy_pct: nationalRow?.['Democracy % (VDem Polyarchy)'] ?? null,
+    country: getCsvValue(nationalRow, 'Country'),
+    iso: getCsvValue(nationalRow, 'ISO'),
+    corporate_tax: getCsvValue(nationalRow, 'Corporate Tax'),
+    vat: getCsvValue(nationalRow, 'VAT/Sales Tax'),
+    dividend_tax_resident: getCsvValue(
+      nationalRow,
+      'Res. Dividend Tax',
+    ),
+    dividend_tax_nonresident: getCsvValue(
+      nationalRow,
+      'Non-Res. Dividend Tax',
+    ),
+    population_2024: getCsvValue(nationalRow, '2024 Population'),
+    population_change: getCsvValue(nationalRow, '10yr Pop Change'),
+    democracy_pct: getCsvValue(
+      nationalRow,
+      'Democracy % (VDem Polyarchy)',
+    ),
+    economic_community: getCsvValue(nationalRow, 'Economic Community'),
+    legal_system: getCsvValue(nationalRow, 'Legal System (desc)'),
+    political_stability: getCsvValue(
+      nationalRow,
+      'Political Stability (desc)',
+    ),
+    contract_enforcement: getCsvValue(
+      nationalRow,
+      'Contract Enforcement (compact)',
+    ),
+    next_election: getCsvValue(nationalRow, 'Next Election'),
+    corruption: getCsvValue(nationalRow, 'Corruption (desc)'),
+    human_rights: getCsvValue(nationalRow, 'Human Rights (desc)'),
+    land_ownership: getCsvValue(nationalRow, 'Land Ownership (desc)'),
+    land_licensing: getCsvValue(nationalRow, 'Land Licensing (desc)'),
+    insurgency: getCsvValue(nationalRow, 'Insurgency (compact)'),
+    crime_composite: getCsvValue(nationalRow, 'Crime Composite (desc)'),
     region_name: subRow?.['Name'] ?? null,
     sez_present: subRow?.['SEZ Present'] ?? null,
     sez_name: subRow?.['SEZ Name'] ?? null,

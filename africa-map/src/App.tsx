@@ -21,10 +21,22 @@ type LocationResponse = {
   iso: string | null
   corporate_tax: string | null
   vat: string | null
+  population_2024: string | null
   dividend_tax_resident: string | null
   dividend_tax_nonresident: string | null
   population_change: string | null
   democracy_pct: string | null
+  economic_community: string | null
+  legal_system: string | null
+  political_stability: string | null
+  contract_enforcement: string | null
+  next_election: string | null
+  corruption: string | null
+  human_rights: string | null
+  land_ownership: string | null
+  land_licensing: string | null
+  insurgency: string | null
+  crime_composite: string | null
   region_name: string | null
   sez_present: string | null
   sez_name: string | null
@@ -68,6 +80,10 @@ function getPopChangeClass(value: string | null): string | undefined {
   return undefined
 }
 
+function popChange(value: string | null): string {
+  return value ?? '—'
+}
+
 const App: React.FC = () => {
   const [markerPosition, setMarkerPosition] = useState<LatLngExpression | null>(
     null,
@@ -76,6 +92,7 @@ const App: React.FC = () => {
   const [data, setData] = useState<LocationResponse | null>(null)
   const requestIdRef = useRef(0)
   const [expanded, setExpanded] = useState(false)
+  const [nationalProfileOpen, setNationalProfileOpen] = useState(false)
 
   const handleMapClick = (position: LatLngLiteral) => {
     setMarkerPosition(position)
@@ -218,6 +235,13 @@ const App: React.FC = () => {
                 </span>
               </div>
 
+              <div className="data-row">
+                <span className="data-label">Economic Community</span>
+                <span className="data-value">
+                  {data.economic_community ?? '—'}
+                </span>
+              </div>
+
               {expanded && (
                 <>
                   <div className="expanded-row">
@@ -290,13 +314,22 @@ const App: React.FC = () => {
               </>
             )}
 
-            <button
-              type="button"
-              className="toggle-btn"
-              onClick={() => setExpanded((prev) => !prev)}
-            >
-              {expanded ? 'Show Less ▲' : 'Show More ▼'}
-            </button>
+            <div className="panel-buttons">
+              <button
+                type="button"
+                className="btn-secondary"
+                onClick={() => setNationalProfileOpen(true)}
+              >
+                National Profile
+              </button>
+              <button
+                type="button"
+                className="btn-primary"
+                onClick={() => setExpanded((prev) => !prev)}
+              >
+                {expanded ? 'Show Less ▲' : 'Show More ▼'}
+              </button>
+            </div>
           </div>
         )}
       </aside>
@@ -326,6 +359,163 @@ const App: React.FC = () => {
           {markerPosition && <Marker position={markerPosition} />}
         </MapContainer>
       </main>
+
+      {nationalProfileOpen && data && (
+        <div
+          className="modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setNationalProfileOpen(false)}
+        >
+          <div className="modal-panel" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                {data.iso && (
+                  <img
+                    src={`https://flagcdn.com/24x18/${data.iso.toLowerCase()}.png`}
+                    alt={data.country ?? ''}
+                    style={{
+                      width: '24px',
+                      height: '18px',
+                      borderRadius: '2px',
+                      objectFit: 'cover',
+                    }}
+                  />
+                )}
+                <span className="country-name">{data.country ?? ''}</span>
+              </div>
+              <button
+                type="button"
+                className="modal-close"
+                aria-label="Close"
+                onClick={() => setNationalProfileOpen(false)}
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="modal-body">
+              <div className="data-row">
+                <span className="data-label">Corporate Tax</span>
+                <span className="data-value">
+                  {data.corporate_tax ?? '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">VAT</span>
+                <span className="data-value">{data.vat ?? '—'}</span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Population (2024)</span>
+                <span className="data-value">
+                  {data.population_2024 ?? '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Pop. Change (10yr)</span>
+                <span className="data-value">
+                  {popChange(data.population_change)}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Res. Dividend Tax</span>
+                <span className="data-value">
+                  {data.dividend_tax_resident ?? '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Non-Res. Dividend Tax</span>
+                <span className="data-value">
+                  {data.dividend_tax_nonresident ?? '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Democracy</span>
+                <span className="data-value">
+                  {data.democracy_pct ? `${data.democracy_pct}%` : '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Economic Community</span>
+                <span className="data-value">
+                  {data.economic_community ?? '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Legal System</span>
+                <span className="data-value">
+                  {data.legal_system ?? '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Political Stability</span>
+                <span className="data-value">
+                  {data.political_stability ?? '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Contract Enforcement</span>
+                <span className="data-value">
+                  {data.contract_enforcement ?? '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Next Election</span>
+                <span className="data-value">{data.next_election ?? '—'}</span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Corruption</span>
+                <span className="data-value">{data.corruption ?? '—'}</span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Human Rights</span>
+                <span className="data-value">
+                  {data.human_rights ?? '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Land Ownership</span>
+                <span className="data-value">
+                  {data.land_ownership ?? '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Land Licensing</span>
+                <span className="data-value">
+                  {data.land_licensing ?? '—'}
+                </span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Insurgency</span>
+                <span className="data-value">{data.insurgency ?? '—'}</span>
+              </div>
+
+              <div className="data-row">
+                <span className="data-label">Crime Composite</span>
+                <span className="data-value">
+                  {data.crime_composite ?? '—'}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
