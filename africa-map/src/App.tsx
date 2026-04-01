@@ -59,6 +59,8 @@ type NominatimResponse = {
   address: NominatimAddress
 }
 
+type CsvRow = Record<string, string>
+
 type MapClickHandlerProps = {
   onClick: (position: LatLngLiteral) => void
 }
@@ -85,6 +87,71 @@ function popChange(value: string | null): string {
   return value ?? '—'
 }
 
+function parseCsv(content: string): CsvRow[] {
+  const rows: string[][] = []
+  let row: string[] = []
+  let field = ''
+  let inQuotes = false
+
+  for (let i = 0; i < content.length; i += 1) {
+    const char = content[i]
+    const next = content[i + 1]
+
+    if (char === '"') {
+      if (inQuotes && next === '"') {
+        field += '"'
+        i += 1
+      } else {
+        inQuotes = !inQuotes
+      }
+      continue
+    }
+
+    if (char === ',' && !inQuotes) {
+      row.push(field)
+      field = ''
+      continue
+    }
+
+    if ((char === '\n' || char === '\r') && !inQuotes) {
+      if (char === '\r' && next === '\n') i += 1
+      row.push(field)
+      field = ''
+      if (row.length > 1 || (row.length === 1 && row[0].trim() !== '')) {
+        rows.push(row)
+      }
+      row = []
+      continue
+    }
+
+    field += char
+  }
+
+  if (field.length > 0 || row.length > 0) {
+    row.push(field)
+    rows.push(row)
+  }
+
+  if (rows.length === 0) return []
+
+  const headers = rows[0]
+  return rows.slice(1).map((cells) => {
+    const record: CsvRow = {}
+    headers.forEach((header, idx) => {
+      record[header] = cells[idx] ?? ''
+    })
+    return record
+  })
+}
+
+function getCsvValue(row: CsvRow | null, key: string): string | null {
+  if (!row) return null
+  const raw = row[key]
+  if (typeof raw !== 'string') return null
+  const trimmed = raw.trim()
+  return trimmed ? trimmed : null
+}
+
 const App: React.FC = () => {
   const [markerPosition, setMarkerPosition] = useState<LatLngExpression | null>(
     null,
@@ -94,13 +161,45 @@ const App: React.FC = () => {
   const requestIdRef = useRef(0)
   const [expanded, setExpanded] = useState(false)
   const [nationalProfileOpen, setNationalProfileOpen] = useState(false)
+  const [nationalRows, setNationalRows] = useState<CsvRow[] | null>(null)
+  const [subnationalRows, setSubnationalRows] = useState<CsvRow[] | null>(null)
+
+  useEffect(() => {
+    const loadCsvData = async () => {
+      try {
+        const nationalRes = await fetch(
+          `${import.meta.env.BASE_URL}data/national_data.csv`,
+        )
+        const subnationalRes = await fetch(
+          `${import.meta.env.BASE_URL}data/subnational_data.csv`,
+        )
+
+        if (!nationalRes.ok || !subnationalRes.ok) {
+          return
+        }
+
+        const [nationalText, subnationalText] = await Promise.all([
+          nationalRes.text(),
+          subnationalRes.text(),
+        ])
+
+        setNationalRows(parseCsv(nationalText))
+        setSubnationalRows(parseCsv(subnationalText))
+      } catch {
+        setNationalRows([])
+        setSubnationalRows([])
+      }
+    }
+
+    void loadCsvData()
+  }, [])
 
   const handleMapClick = (position: LatLngLiteral) => {
     setMarkerPosition(position)
   }
 
   useEffect(() => {
-    if (!markerPosition) return
+    if (!markerPosition || !nationalRows || !subnationalRows) return
 
     const { lat, lng } = markerPosition as LatLngLiteral
     const currentRequestId = ++requestIdRef.current
@@ -135,29 +234,66 @@ const App: React.FC = () => {
           return
         }
 
-        const backendRes = await fetch(
-          `http://localhost:3001/api/location?iso=${iso}&region=${encodeURIComponent(
-            region,
-          )}`,
-        )
+        const targetIso = iso.trim().toLowerCase()
+        const targetRegion = region.trim().toLowerCase()
 
-        if (requestIdRef.current !== currentRequestId) {
-          return
+        const nationalRow =
+          nationalRows.find(
+            (r) => (r['ISO'] || '').trim().toLowerCase() === targetIso,
+          ) ?? null
+        const subRow =
+          targetRegion.length > 0
+            ? subnationalRows.find((r) => {
+                const rowIso = (r['ISO'] || '').trim().toLowerCase()
+                const rowName = (r['Name'] || '').trim().toLowerCase()
+                return rowIso === targetIso && rowName === targetRegion
+              }) ?? null
+            : null
+
+        const frontendData: LocationResponse = {
+          country: getCsvValue(nationalRow, 'Country'),
+          iso: getCsvValue(nationalRow, 'ISO'),
+          corporate_tax: getCsvValue(nationalRow, 'Corporate Tax'),
+          vat: getCsvValue(nationalRow, 'VAT/Sales Tax'),
+          dividend_tax_resident: getCsvValue(nationalRow, 'Res. Dividend Tax'),
+          dividend_tax_nonresident: getCsvValue(
+            nationalRow,
+            'Non-Res. Dividend Tax',
+          ),
+          population_2024: getCsvValue(nationalRow, '2024 Population'),
+          population_change: getCsvValue(nationalRow, '10yr Pop Change'),
+          democracy_pct: getCsvValue(nationalRow, 'Democracy % (VDem Polyarchy)'),
+          economic_community: getCsvValue(nationalRow, 'Economic Community'),
+          legal_system: getCsvValue(nationalRow, 'Legal System (desc)'),
+          political_stability: getCsvValue(
+            nationalRow,
+            'Political Stability (desc)',
+          ),
+          contract_enforcement: getCsvValue(
+            nationalRow,
+            'Contract Enforcement (compact)',
+          ),
+          next_election: getCsvValue(nationalRow, 'Next Election'),
+          corruption: getCsvValue(nationalRow, 'Corruption (desc)'),
+          human_rights: getCsvValue(nationalRow, 'Human Rights (desc)'),
+          land_ownership: getCsvValue(nationalRow, 'Land Ownership (desc)'),
+          land_licensing: getCsvValue(nationalRow, 'Land Licensing (desc)'),
+          insurgency: getCsvValue(nationalRow, 'Insurgency (compact)'),
+          crime_composite: getCsvValue(nationalRow, 'Crime Composite (desc)'),
+          region_name: getCsvValue(subRow, 'Name'),
+          sez_present: getCsvValue(subRow, 'SEZ Present'),
+          sez_name: getCsvValue(subRow, 'SEZ Name'),
+          sez_vat_treatment: getCsvValue(subRow, 'SEZ VAT Treatment'),
+          sez_cit_rate: getCsvValue(subRow, 'SEZ CIT Rate'),
+          land_ownership_rules: getCsvValue(subRow, 'Land Ownership Rules'),
         }
 
-        if (!backendRes.ok) {
+        if (!frontendData.country && !frontendData.region_name) {
           setPanelStatus('nodata')
           return
         }
 
-        const backendJson = (await backendRes.json()) as LocationResponse
-
-        if (!backendJson || (!backendJson.country && !backendJson.region_name)) {
-          setPanelStatus('nodata')
-          return
-        }
-
-        setData(backendJson)
+        setData(frontendData)
         setPanelStatus('success')
       } catch {
         if (requestIdRef.current !== currentRequestId) {
@@ -168,7 +304,7 @@ const App: React.FC = () => {
     }
 
     void run()
-  }, [markerPosition])
+  }, [markerPosition, nationalRows, subnationalRows])
 
   const popChangeClass = getPopChangeClass(data?.population_change ?? null)
 
