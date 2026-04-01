@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { MapContainer, Marker, TileLayer, ZoomControl, useMapEvents } from 'react-leaflet'
-import L, { LatLngExpression, LatLngLiteral } from 'leaflet'
+import L from 'leaflet'
+import type { LatLngExpression, LatLngLiteral } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import './App.css'
 
