@@ -28,15 +28,6 @@ export interface CountryResult {
   landOwnershipText: string;
   insurgencyText: string;
   crimeScore: number;
-  // New macro/FX/market fields
-  gdpPerCapita?: string;
-  gdpGrowth?: string;
-  inflation?: string;
-  debtGdp?: string;
-  fxConvertibility?: string;
-  stockExchange?: string;
-  doingBusiness?: string;
-  naturalResources?: string;
 
   pillars: PillarScore[];
   defaultScore: number;   // 0–100

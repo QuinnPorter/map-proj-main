@@ -67,29 +67,20 @@ function buildPillars(d: (typeof COUNTRY_DATA)[0]): PillarScore[] {
 
   const fx: PillarScore = {
     id: 'fx', name: 'FX Convertibility & Capital Flow',
-    score: d.pillar_fx, weight: 0, confidence: 'medium',
-    drivers: [
-      `FX regime: ${d.fxConvertibility || 'See country detail'}`,
-    ],
+    score: d.pillar_fx, weight: 0, confidence: 'pending',
+    drivers: ['FX convertibility data: coming soon', 'Capital controls data: coming soon'],
   };
 
   const macro: PillarScore = {
     id: 'macro', name: 'Macroeconomic Stability',
-    score: d.pillar_macro, weight: 0, confidence: 'medium',
-    drivers: [
-      `Inflation: ${d.inflation || 'N/A'}`,
-      `Government debt: ${d.debtGdp || 'N/A'} of GDP`,
-      `GDP growth: ${d.gdpGrowth || 'N/A'}`,
-    ],
+    score: d.pillar_macro, weight: 0, confidence: 'pending',
+    drivers: ['Inflation / debt data: coming soon'],
   };
 
   const marketDepth: PillarScore = {
     id: 'marketDepth', name: 'Market Depth & Exitability',
-    score: d.pillar_marketDepth, weight: 0, confidence: 'medium',
-    drivers: [
-      `Stock exchange: ${d.stockExchange ? d.stockExchange.substring(0, 80) : 'N/A'}`,
-      `Ease of doing business: ${d.doingBusiness || 'N/A'}`,
-    ],
+    score: d.pillar_marketDepth, weight: 0, confidence: 'pending',
+    drivers: ['Market liquidity data: coming soon', 'Stock market / exit data: coming soon'],
   };
 
   const infrastructure: PillarScore = {
@@ -181,10 +172,6 @@ export function scoreCountries(
       corruptionText: d.corruptionText, humanRightsText: d.humanRightsText,
       landOwnershipText: d.landOwnershipText, insurgencyText: d.insurgencyText,
       crimeScore: d.crimeScore,
-      gdpPerCapita: d.gdpPerCapita, gdpGrowth: d.gdpGrowth,
-      inflation: d.inflation, debtGdp: d.debtGdp,
-      fxConvertibility: d.fxConvertibility, stockExchange: d.stockExchange,
-      doingBusiness: d.doingBusiness, naturalResources: d.naturalResources,
       pillars, defaultScore, customScore,
       defaultRank: 0, customRank: 0, rankChange: 0,
       excluded, exclusionReasons,

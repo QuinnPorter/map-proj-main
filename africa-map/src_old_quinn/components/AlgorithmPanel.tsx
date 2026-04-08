@@ -6,6 +6,11 @@ interface Props {
   profile: InvestorProfile;
 }
 
+const PILLAR_NAME_MAP: Record<string, string> = {
+  political: 'Political', ruleOfLaw: 'Rule of Law', fx: 'FX & Capital',
+  macro: 'Macro', marketDepth: 'Market Depth', infrastructure: 'Infrastructure', growth: 'Growth',
+};
+
 export default function AlgorithmPanel({ profile }: Props) {
   const [open, setOpen] = useState(false);
 

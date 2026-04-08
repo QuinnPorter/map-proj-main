@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+const API_BASE = import.meta.env.VITE_API_URL ?? 'http://localhost:3001';
+
 export interface LeadershipSentimentScore {
   countryName: string;
   investmentFriendliness: number;
@@ -23,56 +25,6 @@ interface Props {
 
 const scoreColor = (s: number) => { if (s >= 70) return '#2e7d52'; if (s >= 50) return '#b07d1a'; if (s >= 30) return '#c05020'; return '#c0392b'; };
 const scoreLabel = (s: number) => { if (s >= 80) return 'Strongly pro-investment'; if (s >= 60) return 'Broadly investment-friendly'; if (s >= 40) return 'Mixed / neutral signals'; if (s >= 20) return 'Sceptical / nationalist'; return 'Hostile to foreign investment'; };
-const POSITIVE_SIGNALS = ['reform', 'investment', 'private sector', 'stability', 'infrastructure', 'jobs', 'partnership', 'transparency'];
-const NEGATIVE_SIGNALS = ['nationalize', 'restrict', 'ban', 'uncertainty', 'capital controls', 'sanction', 'instability', 'conflict'];
-
-function buildStaticLeadershipFeed(countryName?: string): { items: FeedItem[]; aggregateScore: number; trend: string } {
-  const market = countryName ?? 'Regional';
-  const items: FeedItem[] = [
-    {
-      title: `${market} investment policy briefing`,
-      source: 'Public policy digest',
-      published: '2026-04-01',
-      link: '',
-      investmentScore: 66,
-      keySignals: ['Regulatory clarity', 'Infrastructure priority'],
-      sentiment: 'constructive',
-      summary: 'Recent official messaging emphasises policy continuity and infrastructure delivery.',
-    },
-    {
-      title: `${market} leadership communications update`,
-      source: 'Economic updates monitor',
-      published: '2026-03-26',
-      link: '',
-      investmentScore: 58,
-      keySignals: ['Industrial policy', 'Domestic capacity'],
-      sentiment: 'mixed',
-      summary: 'Signals are mixed: support for investment is paired with stronger domestic-content language.',
-    },
-  ];
-  return { items, aggregateScore: 62, trend: 'stable' };
-}
-
-function analyseTextLocally(text: string, countryName?: string): LeadershipSentimentScore {
-  const lower = text.toLowerCase();
-  const positiveMatches = POSITIVE_SIGNALS.filter((s) => lower.includes(s));
-  const negativeMatches = NEGATIVE_SIGNALS.filter((s) => lower.includes(s));
-  const raw = 50 + (positiveMatches.length * 8) - (negativeMatches.length * 10);
-  const score = Math.max(0, Math.min(100, raw));
-
-  return {
-    countryName: countryName ?? 'Unknown',
-    investmentFriendliness: score,
-    emotionalRegister: score >= 65 ? 'Optimistic' : score >= 45 ? 'Measured' : 'Defensive',
-    keyPhrases: positiveMatches.slice(0, 5),
-    commitments: positiveMatches.length > 0 ? positiveMatches.map((s) => `Mentions ${s}`).slice(0, 3) : [],
-    redFlags: negativeMatches.length > 0 ? negativeMatches.map((s) => `Potential concern: ${s}`).slice(0, 3) : [],
-    summary: positiveMatches.length + negativeMatches.length === 0
-      ? 'No strong investment signals detected. Add more detailed policy language for a clearer assessment.'
-      : `Detected ${positiveMatches.length} positive and ${negativeMatches.length} cautionary signals in the submitted text.`,
-    timestamp: Date.now(),
-  };
-}
 
 export default function LeadershipSentiment({ countryName, onScoreGenerated }: Props) {
   const [text, setText] = useState('');
@@ -86,30 +38,45 @@ export default function LeadershipSentiment({ countryName, onScoreGenerated }: P
   const [activeView, setActiveView] = useState<'analyse' | 'feed'>('feed');
 
   useEffect(() => {
-    if (!countryName) {
-      setFeedItems([]);
-      setFeedMeta(null);
-      return;
-    }
+    if (!countryName) return;
     setFeedLoading(true);
-    const timer = setTimeout(() => {
-      const data = buildStaticLeadershipFeed(countryName);
-      setFeedItems(data.items);
-      setFeedMeta({ aggregateScore: data.aggregateScore, trend: data.trend });
-      setFeedLoading(false);
-    }, 150);
-    return () => clearTimeout(timer);
+    fetch(`${API_BASE}/api/feeds/leadership/${encodeURIComponent(countryName)}`)
+      .then(r => r.json())
+      .then(data => {
+        setFeedItems(data.items ?? []);
+        setFeedMeta({ aggregateScore: data.aggregateScore, trend: data.trend });
+      })
+      .catch(() => {})
+      .finally(() => setFeedLoading(false));
   }, [countryName]);
 
   async function analyse() {
     if (!text.trim() || loading) return;
     setLoading(true);
-    setTimeout(() => {
-      const score = analyseTextLocally(text, countryName);
+    try {
+      const res = await fetch(`${API_BASE}/api/leadership`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, countryName, leader }),
+      });
+      const parsed = await res.json();
+      const score: LeadershipSentimentScore = {
+        countryName: countryName ?? 'Unknown',
+        investmentFriendliness: parsed.investmentFriendliness ?? 50,
+        emotionalRegister: parsed.emotionalRegister ?? 'Neutral',
+        keyPhrases: parsed.keyPhrases ?? [],
+        commitments: parsed.commitments ?? [],
+        redFlags: parsed.redFlags ?? [],
+        summary: parsed.summary ?? '',
+        timestamp: Date.now(),
+      };
       setResult(score);
       if (onScoreGenerated) onScoreGenerated(score);
+    } catch {
+      alert('Error connecting to server. Please check the backend is running.');
+    } finally {
       setLoading(false);
-    }, 200);
+    }
   }
 
   return (
@@ -118,7 +85,7 @@ export default function LeadershipSentiment({ countryName, onScoreGenerated }: P
       <div style={{ background: '#fef9ec', borderRadius: 8, padding: '0.75rem 1rem', border: '1px solid #f5e6b2' }}>
         <div style={{ fontSize: '0.82rem', fontWeight: 600, color: '#b07d1a', marginBottom: '0.2rem' }}>🎙️ Leadership Sentiment</div>
         <div style={{ fontSize: '0.74rem', color: '#4a5568', lineHeight: 1.5 }}>
-          {countryName ? `Signals for ${countryName}` : 'Analyse speeches and statements'} — generated from bundled static rules for GitHub Pages deployment.
+          {countryName ? `Live signals from ${countryName}` : 'Analyse speeches and statements'} — automatically fetched and refreshed daily.
         </div>
       </div>
 

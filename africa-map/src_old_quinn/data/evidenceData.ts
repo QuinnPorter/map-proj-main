@@ -131,17 +131,17 @@ export const EVIDENCE: PillarEvidence[] = [
 
   {
     pillarId: 'fx',
-    summary: 'FX convertibility and capital repatriation are core investor requirements — now scored for all 54 countries.',
-    keyInsight: 'CFA franc zone countries (UEMOA and CEMAC) benefit from freely convertible currencies pegged to the euro, giving them a structural advantage for investors requiring capital repatriation. Countries with highly restricted FX (Algeria, Eritrea, Zimbabwe, Sudan, Libya, DR Congo, Burundi) present the highest repatriation risk. Recent IMF analysis highlights that policy uncertainty around capital flows amplifies FDI losses. Nigeria, Egypt, and Ethiopia have undergone significant FX reforms since 2023, improving convertibility but with residual risk.',
-    confidence: 'moderate',
-    dataSource: 'IMF Annual Report on Exchange Arrangements and Exchange Restrictions (AREAER) 2024; World Bank; central bank publications; AfDB',
+    summary: 'FX convertibility and capital repatriation are core investor requirements — data pending for this pillar.',
+    keyInsight: 'Capital controls and FX illiquidity are among the top-cited barriers to investment in African frontier markets. Recent UNCTAD data show Africa\'s FDI stock at ~42% of GDP — significantly below South America\'s 74% — partly reflecting persistent repatriation friction. IMF (2023) WEO analysis highlights that policy uncertainty around capital flows amplifies FDI losses for non-aligned economies.',
+    confidence: 'mixed',
+    dataSource: 'Data pending: IMF AREAER capital controls database; World Bank remittance frictions; central bank FX availability surveys',
     citations: [
       {
         authors: 'UNCTAD',
         year: 2024,
         title: 'World Investment Report 2024',
         journal: 'United Nations Conference on Trade and Development',
-        finding: 'Africa had an FDI stock of ~42% of GDP in 2023, well below South America (74%), partly reflecting persistent repatriation friction and FX restrictions in key markets.',
+        finding: 'Africa had an FDI stock of ~42% of GDP in 2023, well below South America (74%) and pointing to structural barriers including capital repatriation friction.',
       },
       {
         authors: 'IMF',
@@ -150,23 +150,16 @@ export const EVIDENCE: PillarEvidence[] = [
         journal: 'IMF World Economic Outlook (April 2023), Chapter 4',
         finding: 'Policy uncertainty amplifies FDI losses for non-aligned economies; FX and capital flow restrictions increase vulnerability to fragmentation-driven investment reallocation.',
       },
-      {
-        authors: 'ISS Africa Futures',
-        year: 2026,
-        title: 'Africa Financial Flows Forecast',
-        journal: 'Institute for Security Studies, African Futures',
-        finding: 'FDI flows to Africa depend on FX availability, capital repatriation frameworks, and currency stability alongside institutional and market factors.',
-      },
     ],
-    yourDataNote: 'Scored from: IMF AREAER classifications mapped to 0–100 scale. Freely convertible = 88, Largely convertible = 75, Partially restricted = 45–58, Highly restricted = 15. CFA franc zone countries score highly due to euro peg and free capital movement within the zone.',
+    yourDataNote: '⚠ Data pending. This pillar is excluded from current scoring. Add IMF AREAER capital controls scores and central bank FX availability data to enable.',
   },
 
   {
     pillarId: 'macro',
-    summary: 'Macroeconomic stability — inflation, debt, and growth — is now scored for all 54 countries.',
-    keyInsight: 'Asiedu (2006) found lower inflation significantly raises FDI in Africa. The current macro landscape is polarised: CFA franc zone countries have low inflation (~3–5%) due to the euro peg, while several non-CFA countries face severe macro stress — Sierra Leone (52%), South Sudan (85%), Sudan (62%). High debt burdens (Eritrea 185%, Sudan 212%, Zambia 128%) signal sovereign risk. Growth leaders include Niger (11%), Ivory Coast (6.8%), Rwanda (7.8%), and Senegal (8.2%), while resource-dependent Equatorial Guinea (-3.5%) and low-reform South Africa (1.1%) lag.',
+    summary: 'Macroeconomic stability — particularly inflation and exchange rate volatility — is a well-documented FDI determinant in Africa.',
+    keyInsight: 'Asiedu (2006) found lower inflation significantly raises FDI in Africa. More recent analysis (2023) confirms GDP growth uncertainty and inflation volatility induce speculative FDI but deter pro-growth investment. African Development Bank estimates Africa needs $130–170bn annually to close its infrastructure-macro gap. Debt distress in Ghana and Ethiopia (2023) signals macro risk crystallisation for frontier investors.',
     confidence: 'moderate',
-    dataSource: 'IMF World Economic Outlook (2024); World Bank World Development Indicators; AfDB African Economic Outlook 2024',
+    dataSource: 'Data pending: World Bank WDI inflation, debt-to-GDP, current account; IMF Article IV assessments',
     citations: [
       {
         authors: 'Asiedu, E.',
@@ -180,25 +173,25 @@ export const EVIDENCE: PillarEvidence[] = [
         year: 2023,
         title: 'Environmental risk and growth in foreign direct investment: Is the composition of FDI in Sub-Saharan Africa speculative?',
         journal: 'Cogent Economics & Finance (Taylor & Francis)',
-        finding: 'GDP growth uncertainty and inflation volatility attract speculative FDI in SSA — but governance quality moderates this effect.',
+        finding: 'GDP growth uncertainty and inflation volatility attract speculative FDI in SSA — consistent with pollution haven dynamics — but governance quality moderates this effect.',
       },
       {
-        authors: 'IMF',
-        year: 2024,
-        title: 'World Economic Outlook',
-        journal: 'International Monetary Fund',
-        finding: 'Sub-Saharan Africa growth at 3.8% in 2024; inflation declining but fiscal pressures remain elevated in high-debt countries.',
+        authors: 'Chatham House',
+        year: 2023,
+        title: 'Africa in 2023: Continuing political and economic volatility',
+        journal: 'Chatham House',
+        finding: 'South Africa and Nigeria facing low growth; Ethiopia and Ghana sovereign debt at distressed levels; public sector debt-to-GDP above 60% on average across African countries in 2022.',
       },
     ],
-    yourDataNote: 'Scored from: Inflation rate (45% weight), government debt/GDP (35%), GDP growth rate (20%). Data approximate for 2024 from IMF/World Bank. CFA franc zone countries benefit from structurally low inflation.',
+    yourDataNote: '⚠ Data pending. Add World Bank WDI macro data (inflation, debt/GDP, current account balance, growth volatility) to enable this pillar.',
   },
 
   {
     pillarId: 'marketDepth',
-    summary: 'Market depth and exitability — now scored for all 54 countries using stock exchange quality and ease of doing business.',
-    keyInsight: 'Africa\'s capital markets are heavily concentrated: JSE (South Africa), Egyptian Exchange, and Casablanca Stock Exchange account for the majority of continental market capitalisation. The BRVM serves 8 WAEMU countries from Abidjan and is the most accessible regional exchange for West Africa. Rwanda, Mauritius, and Morocco are the top-ranked ease-of-doing-business performers. Ethiopia\'s ESX launched in 2024. Private equity exit routes remain thin outside South Africa, Nigeria, Kenya, and Egypt.',
+    summary: 'Market size, financial development, and exit routes are consistently significant FDI determinants — data pending for Africa-specific market depth.',
+    keyInsight: 'Multiple studies confirm market size is among the most robust Africa-specific FDI predictors. Financial sector depth (supply-leading hypothesis) is confirmed for West Africa: a 1% increase in FDI raises growth by 0.26% in the long run. Ease of doing business positively predicts FDI inflows across African countries even controlling for natural resources.',
     confidence: 'moderate',
-    dataSource: 'World Federation of Exchanges; World Bank Doing Business legacy data; AfDB; national stock exchange publications',
+    dataSource: 'Data pending: stock market capitalisation, banking sector depth, World Bank Doing Business (exit procedures), AfDB financial sector indicators',
     citations: [
       {
         authors: 'Njuguna, A.E. & Nnadozie, E.',
@@ -212,17 +205,17 @@ export const EVIDENCE: PillarEvidence[] = [
         year: 2020,
         title: 'The role of FDI, financial development, democracy and political instability on economic growth in West Africa',
         journal: 'International Journal of Managerial Finance',
-        finding: 'Financial development follows supply-leading hypothesis in West Africa. Financial sector depth crucial for sustainable development and FDI attractiveness.',
+        finding: 'Financial development follows supply-leading hypothesis in West Africa. Long-run FDI coefficient: 1% FDI increase → 0.26% economic growth. Financial sector depth crucial for sustainable development.',
       },
       {
         authors: 'ISS Africa Futures',
         year: 2026,
         title: 'Africa Financial Flows Forecast',
         journal: 'Institute for Security Studies, African Futures',
-        finding: 'Africa\'s FDI stock at ~42% of GDP vs South America 74%. Thin exit markets outside the largest economies remain a structural barrier to PE and institutional investment.',
+        finding: 'In 2023, Africa had FDI stock of ~42% of GDP vs South America 74%. AfDB estimates $130–170bn annual infrastructure gap. Nigeria alone contributed $65bn of $125bn in African crypto investment in 2024.',
       },
     ],
-    yourDataNote: 'Scored from: Stock exchange quality and ease of doing business tier. JSE=88, EGX=78, CSE=75, SEM=72, NGX=65, NSE=62, BRVM=55, No exchange=10–20.',
+    yourDataNote: '⚠ Data pending. Add AfDB financial sector depth, stock market cap, and World Bank exit cost data to enable this pillar.',
   },
 
   {
