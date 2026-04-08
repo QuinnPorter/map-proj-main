@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-
-const API_BASE = import.meta.env.VITE_API_URL ?? 'http://localhost:3001';
+import { EVIDENCE } from '../data/evidenceData';
 
 interface Message { role: 'user' | 'assistant'; content: string; }
 interface FeedItem { title: string; source: string; published: string; link: string; takeaway: string; relevance: number; }
@@ -15,6 +14,36 @@ const SUGGESTED = [
 
 interface Props { countryName?: string; pillarName?: string; }
 
+function buildStaticFeed(countryName?: string): FeedItem[] {
+  return EVIDENCE.slice(0, 5).map((entry, idx) => ({
+    title: `${entry.pillarId.toUpperCase()}: ${entry.summary}`,
+    source: `${entry.citations[0]?.journal ?? 'Research brief'} (${countryName ?? 'Africa'})`,
+    published: `${entry.citations[0]?.year ?? 2026}-01-01`,
+    link: entry.citations[0]?.url ?? '',
+    takeaway: entry.keyInsight,
+    relevance: Math.max(5, 9 - idx),
+  }));
+}
+
+function generateStaticResearchReply(question: string, countryName?: string, pillarName?: string): string {
+  const q = question.toLowerCase();
+  const scope = countryName ?? 'African markets';
+  const pillarEvidence = pillarName
+    ? EVIDENCE.find((e) => e.pillarId.toLowerCase() === pillarName.toLowerCase())
+    : undefined;
+  const top = pillarEvidence ?? EVIDENCE.find((e) =>
+    q.includes(e.pillarId.toLowerCase()) || q.includes(e.summary.toLowerCase().split(' ')[0].toLowerCase()),
+  ) ?? EVIDENCE[0];
+  const citations = top.citations.slice(0, 2).map((c) => `${c.authors} (${c.year})`).join('; ');
+  return [
+    `Static research brief for ${scope}:`,
+    top.keyInsight,
+    `Evidence confidence: ${top.confidence}.`,
+    `Representative sources: ${citations}.`,
+    'Note: this GitHub Pages build uses an in-browser evidence database and does not call a backend API.',
+  ].join('\n');
+}
+
 export default function ResearchAssistant({ countryName, pillarName }: Props) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -25,13 +54,16 @@ export default function ResearchAssistant({ countryName, pillarName }: Props) {
 
   // Load live feed when country is provided
   useEffect(() => {
-    if (!countryName) return;
+    if (!countryName) {
+      setFeedItems([]);
+      return;
+    }
     setFeedLoading(true);
-    fetch(`${API_BASE}/api/feeds/research/${encodeURIComponent(countryName)}`)
-      .then(r => r.json())
-      .then(data => { setFeedItems(data.papers ?? []); })
-      .catch(() => {})
-      .finally(() => setFeedLoading(false));
+    const timer = setTimeout(() => {
+      setFeedItems(buildStaticFeed(countryName));
+      setFeedLoading(false);
+    }, 150);
+    return () => clearTimeout(timer);
   }, [countryName]);
 
   async function sendMessage(text: string) {
@@ -41,20 +73,11 @@ export default function ResearchAssistant({ countryName, pillarName }: Props) {
     setInput('');
     setLoading(true);
 
-    try {
-      const res = await fetch(`${API_BASE}/api/research`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: newMessages, countryName, pillarName }),
-      });
-      const data = await res.json();
-      const reply = data.content?.map((b: { type: string; text?: string }) => b.type === 'text' ? b.text : '').join('') ?? 'No response.';
+    setTimeout(() => {
+      const reply = generateStaticResearchReply(text, countryName, pillarName);
       setMessages([...newMessages, { role: 'assistant', content: reply }]);
-    } catch {
-      setMessages([...newMessages, { role: 'assistant', content: 'Error connecting to research assistant. Please check the server is running.' }]);
-    } finally {
       setLoading(false);
-    }
+    }, 200);
   }
 
   return (
@@ -65,7 +88,7 @@ export default function ResearchAssistant({ countryName, pillarName }: Props) {
         <div style={{ fontSize: '0.82rem', fontWeight: 600, color: '#3d7be8', marginBottom: '0.2rem' }}>📚 Research Assistant</div>
         <div style={{ fontSize: '0.74rem', color: '#4a5568', lineHeight: 1.5 }}>
           Ask about academic literature and investment evidence{countryName ? ` for ${countryName}` : ''}. 
-          {countryName && ' Also shows latest research papers fetched automatically.'}
+          {countryName && ' Also shows latest research briefs from bundled in-app data.'}
         </div>
       </div>
 
@@ -88,7 +111,7 @@ export default function ResearchAssistant({ countryName, pillarName }: Props) {
       {/* Live feed view */}
       {activeView === 'feed' && countryName && (
         <div>
-          {feedLoading && <div style={{ fontSize: '0.78rem', color: '#8a9ab0', padding: '0.5rem 0' }}>Fetching latest papers…</div>}
+          {feedLoading && <div style={{ fontSize: '0.78rem', color: '#8a9ab0', padding: '0.5rem 0' }}>Loading research briefs…</div>}
           {!feedLoading && feedItems.length === 0 && (
             <div style={{ fontSize: '0.78rem', color: '#8a9ab0' }}>No recent papers found. Try the chat to ask about research.</div>
           )}

@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import type { InvestorProfile, CountryResult } from '../types';
-import { scoreCountries, DEFAULT_WEIGHTS, PILLARS } from '../scoring/engine';
+import { scoreCountries, PILLARS } from '../scoring/engine';
 import { PEER_GROUPS } from '../data/peerGroups';
 import { SCENARIOS, applyScenario } from '../scoring/scenarios';
 import CountryCard from './CountryCard';

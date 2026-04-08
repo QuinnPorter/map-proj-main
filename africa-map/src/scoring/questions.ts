@@ -242,7 +242,7 @@ const SECTOR_ADJUSTMENTS: Record<string, Partial<PillarWeights>> = {
   infrastructure: { infrastructure: +8, fx: +4, macro: -4, marketDepth: -8 },
   fintech:        { ruleOfLaw: +6, marketDepth: +6, infrastructure: -4, macro: -4, growth: -4 },
   agri:           { infrastructure: +6, ruleOfLaw: +4, growth: +4, marketDepth: -8, fx: -6 },
-  manufacturing:  { infrastructure: +8, labor: 0, political: +4, marketDepth: -6, growth: -6 },
+  manufacturing:  { infrastructure: +8, political: +4, marketDepth: -6, growth: -6 },
   realestate:     { ruleOfLaw: +10, infrastructure: +4, fx: +4, marketDepth: -10, growth: -8 },
   extractives:    { political: +6, fx: +6, ruleOfLaw: +4, marketDepth: -8, growth: -8 },
   tech:           { growth: +8, marketDepth: +6, infrastructure: +4, macro: -8, political: -10 },
