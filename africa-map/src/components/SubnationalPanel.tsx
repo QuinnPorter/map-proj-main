@@ -115,6 +115,17 @@ function RegionCard({ region, isExpanded, onToggle, highlight }: {
               {region.majorIndustries.substring(0, 55)}{region.majorIndustries.length > 55 ? '…' : ''}
             </div>
           )}
+          {region.crimeLevel && (
+            <div style={{
+              display: 'inline-block', fontSize: '0.63rem', fontWeight: 600,
+              padding: '0.1rem 0.35rem', borderRadius: 4, marginTop: '0.2rem',
+              background: region.crimeIndex >= 8 ? '#fdf0f0' : region.crimeIndex >= 6 ? '#fef9ec' : region.crimeIndex <= 3 ? '#f0faf5' : '#f8f9fb',
+              color: region.crimeIndex >= 8 ? '#c0392b' : region.crimeIndex >= 6 ? '#b07d1a' : region.crimeIndex <= 3 ? '#2e7d52' : '#6b7a8d',
+              border: `1px solid ${region.crimeIndex >= 8 ? '#f5c6c6' : region.crimeIndex >= 6 ? '#f5e6b2' : region.crimeIndex <= 3 ? '#b8e0cc' : '#e2e6ea'}`,
+            }}>
+              🔒 {region.crimeLevel} crime
+            </div>
+          )}
         </div>
 
         <div style={{ textAlign: 'right', minWidth: 42 }}>
@@ -193,6 +204,49 @@ function RegionCard({ region, isExpanded, onToggle, highlight }: {
               </div>
             ))}
           </div>
+
+          {/* Topography panel */}
+          {region.climateZone && (
+            <div style={{ marginTop: '0.5rem', background: '#f0f4ff', border: '1px solid #d0d8f0', borderRadius: 6, padding: '0.5rem 0.65rem' }}>
+              <div style={{ fontSize: '0.67rem', fontWeight: 700, color: '#4a5568', marginBottom: '0.3rem' }}>🌍 Topography & Climate</div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.25rem' }}>
+                {[
+                  ['Climate', region.climateZone],
+                  ['Terrain', region.terrainType],
+                  ['Elevation', region.elevationRange ? region.elevationRange + 'm' : ''],
+                  ['Avg temp', region.avgTemperature ? region.avgTemperature + '°C' : ''],
+                  ['Rainfall', region.annualRainfall ? region.annualRainfall + 'mm/yr' : ''],
+                  ['Flood risk', region.floodRisk],
+                  ['Drought risk', region.droughtRisk],
+                ].filter(([, v]) => v).map(([label, value]) => (
+                  <div key={label} style={{ fontSize: '0.68rem', color: '#4a5568' }}>
+                    <span style={{ color: '#8a9ab0' }}>{label}: </span>{String(value).substring(0, 40)}
+                  </div>
+                ))}
+              </div>
+              {region.topographyNotes && (
+                <div style={{ fontSize: '0.68rem', color: '#6b7a8d', marginTop: '0.25rem', fontStyle: 'italic' }}>{region.topographyNotes}</div>
+              )}
+            </div>
+          )}
+
+          {/* Ports and rail */}
+          {(region.namedPorts || region.railRoutes) && (
+            <div style={{ marginTop: '0.4rem', display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+              {region.namedPorts && region.namedPorts !== 'No major port in this region' && (
+                <div style={{ background: '#f0faf5', border: '1px solid #b8e0cc', borderRadius: 6, padding: '0.45rem 0.65rem' }}>
+                  <div style={{ fontSize: '0.67rem', fontWeight: 700, color: '#2e7d52', marginBottom: '0.15rem' }}>⚓ Ports & Straits</div>
+                  <div style={{ fontSize: '0.69rem', color: '#4a5568' }}>{region.namedPorts}</div>
+                </div>
+              )}
+              {region.railRoutes && region.railRoutes !== 'Information unavailable' && (
+                <div style={{ background: '#fef9ec', border: '1px solid #f5e6b2', borderRadius: 6, padding: '0.45rem 0.65rem' }}>
+                  <div style={{ fontSize: '0.67rem', fontWeight: 700, color: '#b07d1a', marginBottom: '0.15rem' }}>🚂 Rail Routes</div>
+                  <div style={{ fontSize: '0.69rem', color: '#4a5568' }}>{region.railRoutes.substring(0, 120)}{region.railRoutes.length > 120 ? '…' : ''}</div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       )}
     </div>

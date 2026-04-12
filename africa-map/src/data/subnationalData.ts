@@ -1,4 +1,4 @@
-// AUTO-GENERATED — 821 regions across all 54 African countries
+// AUTO-GENERATED v8 — 821 regions, 54 countries, topography + ports + crime
 
 export interface RegionScores {
   infrastructure: number; power: number; port: number;
@@ -6,7 +6,7 @@ export interface RegionScores {
   skillLevel: number; reformMomentum: number; corruption: number;
   regulatoryPredictability: number; timeToStart: number;
   railConnectivity: number; marketAccess: number; tradeCorridor: number;
-  incentiveReliability: number; waterAvailability: number;
+  incentiveReliability: number; waterAvailability: number; crime: number;
 }
 
 export interface RegionData {
@@ -15,8 +15,12 @@ export interface RegionData {
   majorIndustries: string; keyForeignInvestors: string;
   electricityCost: string; distanceToPort: string;
   industrialLandCost: string; laborCostLevel: string;
-  skillLevel: string; exportOrientation: string;
-  multinationalPresence: string;
+  skillLevel: string; exportOrientation: string; multinationalPresence: string;
+  climateZone: string; terrainType: string; elevationRange: string;
+  avgTemperature: string; annualRainfall: string;
+  floodRisk: string; droughtRisk: string; topographyNotes: string;
+  namedPorts: string; railRoutes: string;
+  crimeIndex: number; crimeLevel: string;
   scores: RegionScores;
   compositeScore: number;
 }
@@ -38,6 +42,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–Low",
       "exportOrientation": "High",
       "multinationalPresence": "High",
+      "climateZone": "Temperate / Semi-arid",
+      "terrainType": "Coastal, Karoo semi-desert, mountains",
+      "elevationRange": "0–2500",
+      "avgTemperature": "17",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Great Karoo semi-desert interior; Eastern Cape mountains",
+      "namedPorts": "Port of Port Elizabeth (Ngqura); East London port",
+      "railRoutes": "Transnet Freight Rail (19,000km network); Gautrain (Johannesburg); Metrorail; Blue Train; ore export lines",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -54,9 +70,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 10
       },
-      "compositeScore": 51
+      "compositeScore": 48
     },
     {
       "country": "South Africa",
@@ -73,6 +90,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "High",
       "multinationalPresence": "Medium",
+      "climateZone": "Temperate semi-arid",
+      "terrainType": "Highveld plains",
+      "elevationRange": "1200–1900",
+      "avgTemperature": "16",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Flat Highveld plateau; agricultural; cold winters",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Transnet Freight Rail (19,000km network); Gautrain (Johannesburg); Metrorail; Blue Train; ore export lines",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -89,9 +118,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 20
       },
-      "compositeScore": 49
+      "compositeScore": 48
     },
     {
       "country": "South Africa",
@@ -108,6 +138,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "High",
       "exportOrientation": "High",
       "multinationalPresence": "Very High",
+      "climateZone": "Temperate highland",
+      "terrainType": "Highveld plateau",
+      "elevationRange": "1400–1800",
+      "avgTemperature": "16",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Johannesburg/Pretoria plateau; summer thunderstorms; mild climate",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Transnet Freight Rail (19,000km network); Gautrain (Johannesburg); Metrorail; Blue Train; ore export lines",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 75,
         "power": 38,
@@ -124,9 +166,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 85,
         "tradeCorridor": 75,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 58
+      "compositeScore": 55
     },
     {
       "country": "South Africa",
@@ -143,6 +186,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "High",
       "multinationalPresence": "High",
+      "climateZone": "Subtropical humid",
+      "terrainType": "Coastal lowlands to Drakensberg",
+      "elevationRange": "0–3400",
+      "avgTemperature": "20",
+      "annualRainfall": "850",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Durban coast tropical; Drakensberg peaks; diverse terrain",
+      "namedPorts": "Port of Durban (largest container port in Africa); Richards Bay (coal export)",
+      "railRoutes": "Transnet Freight Rail (19,000km network); Gautrain (Johannesburg); Metrorail; Blue Train; ore export lines",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -159,9 +214,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 85,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 10
       },
-      "compositeScore": 50
+      "compositeScore": 47
     },
     {
       "country": "South Africa",
@@ -178,6 +234,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "High",
       "multinationalPresence": "Medium",
+      "climateZone": "Subtropical semi-arid",
+      "terrainType": "Bushveld, Limpopo valley",
+      "elevationRange": "200–2100",
+      "avgTemperature": "22",
+      "annualRainfall": "450",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Hot lowveld; Waterberg mountains; Limpopo River basin",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Transnet Freight Rail (19,000km network); Gautrain (Johannesburg); Metrorail; Blue Train; ore export lines",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -194,9 +262,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 49
+      "compositeScore": 48
     },
     {
       "country": "South Africa",
@@ -213,6 +282,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "High",
       "multinationalPresence": "Medium",
+      "climateZone": "Subtropical",
+      "terrainType": "Highveld, Lowveld escarpment",
+      "elevationRange": "200–2300",
+      "avgTemperature": "18",
+      "annualRainfall": "650",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Drakensberg escarpment; Panorama Route; Kruger lowveld",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Transnet Freight Rail (19,000km network); Gautrain (Johannesburg); Metrorail; Blue Train; ore export lines",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -229,9 +310,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 20
       },
-      "compositeScore": 49
+      "compositeScore": 48
     },
     {
       "country": "South Africa",
@@ -248,6 +330,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "High",
       "multinationalPresence": "Medium",
+      "climateZone": "Temperate semi-arid",
+      "terrainType": "Bushveld, Kalahari fringe",
+      "elevationRange": "1000–1500",
+      "avgTemperature": "19",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Semi-arid bushveld; Kalahari fringe; Rustenburg Platinum Belt",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Transnet Freight Rail (19,000km network); Gautrain (Johannesburg); Metrorail; Blue Train; ore export lines",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -264,9 +358,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 20
       },
-      "compositeScore": 49
+      "compositeScore": 48
     },
     {
       "country": "South Africa",
@@ -283,6 +378,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "High",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Karoo desert, Kalahari",
+      "elevationRange": "0–2400",
+      "avgTemperature": "18",
+      "annualRainfall": "200",
+      "floodRisk": "Very Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Largest province; Namakwa flowers; Kalahari; very arid",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Transnet Freight Rail (19,000km network); Gautrain (Johannesburg); Metrorail; Blue Train; ore export lines",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -299,7 +406,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 41
     },
@@ -318,6 +426,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "High",
       "exportOrientation": "High",
       "multinationalPresence": "High",
+      "climateZone": "Mediterranean / Semi-arid",
+      "terrainType": "Coastal mountains, valleys, plains",
+      "elevationRange": "0–1900",
+      "avgTemperature": "17",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Cape Fold Mountains; Cape Town at sea level; fertile Winelands valleys",
+      "namedPorts": "Port of Cape Town (major); Cape of Good Hope (Cape Route — strategic for vessels avoiding Suez)",
+      "railRoutes": "Transnet Freight Rail (19,000km network); Gautrain (Johannesburg); Metrorail; Blue Train; ore export lines",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 75,
         "power": 50,
@@ -334,9 +454,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 75,
         "incentiveReliability": 65,
-        "waterAvailability": 65
+        "waterAvailability": 65,
+        "crime": 10
       },
-      "compositeScore": 64
+      "compositeScore": 60
     }
   ],
   "Nigeria": [
@@ -355,6 +476,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -371,9 +504,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 31
+      "compositeScore": 29
     },
     {
       "country": "Nigeria",
@@ -390,6 +524,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -406,9 +552,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 31
+      "compositeScore": 29
     },
     {
       "country": "Nigeria",
@@ -425,6 +572,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -441,9 +600,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 31
+      "compositeScore": 29
     },
     {
       "country": "Nigeria",
@@ -460,6 +620,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -476,9 +648,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 31
+      "compositeScore": 29
     },
     {
       "country": "Nigeria",
@@ -495,6 +668,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -511,9 +696,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 31
+      "compositeScore": 29
     },
     {
       "country": "Nigeria",
@@ -530,6 +716,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -546,9 +744,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 32
+      "compositeScore": 30
     },
     {
       "country": "Nigeria",
@@ -565,6 +764,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -581,9 +792,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 31
+      "compositeScore": 29
     },
     {
       "country": "Nigeria",
@@ -600,6 +812,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid / Arid",
+      "terrainType": "Lake Chad basin, Sahel",
+      "elevationRange": "250–500",
+      "avgTemperature": "30",
+      "annualRainfall": "500",
+      "floodRisk": "Medium",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Lake Chad (shrinking); Boko Haram conflict zone; extreme heat; very dry",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -616,9 +840,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 31
+      "compositeScore": 29
     },
     {
       "country": "Nigeria",
@@ -635,6 +860,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -651,9 +888,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -670,6 +908,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -686,9 +936,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -705,6 +956,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -721,9 +984,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -740,6 +1004,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -756,9 +1032,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -775,6 +1052,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -791,9 +1080,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -810,6 +1100,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Plateau edge, valleys",
+      "elevationRange": "200–400",
+      "avgTemperature": "26",
+      "annualRainfall": "1500",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Coal city; Enugu plateau; humid south-east Nigeria",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 50,
         "power": 25,
@@ -826,9 +1128,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 42
+      "compositeScore": 40
     },
     {
       "country": "Nigeria",
@@ -845,6 +1148,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -861,9 +1176,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -880,6 +1196,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -896,9 +1224,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -915,6 +1244,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 50,
         "power": 25,
@@ -931,9 +1272,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 42
+      "compositeScore": 40
     },
     {
       "country": "Nigeria",
@@ -950,6 +1292,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -966,9 +1320,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -985,6 +1340,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Plateau and plains",
+      "elevationRange": "600–900",
+      "avgTemperature": "25",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Middle Belt transition; mixed terrain; historic city",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -1001,9 +1368,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 37
+      "compositeScore": 35
     },
     {
       "country": "Nigeria",
@@ -1020,6 +1388,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Semi-arid (Sahel)",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "460–500",
+      "avgTemperature": "27",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Sahel zone; hot dry season; harmattan dust; important for northern trade",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -1036,9 +1416,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 37
+      "compositeScore": 35
     },
     {
       "country": "Nigeria",
@@ -1055,6 +1436,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1071,9 +1464,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1090,6 +1484,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1106,9 +1512,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1125,6 +1532,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1141,9 +1560,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1160,6 +1580,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1176,9 +1608,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1195,6 +1628,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical humid",
+      "terrainType": "Coastal lowland, lagoons, islands",
+      "elevationRange": "0–50",
+      "avgTemperature": "27",
+      "annualRainfall": "1600",
+      "floodRisk": "Very High",
+      "droughtRisk": "Low",
+      "topographyNotes": "Sea-level megacity; severe flooding risk; Atlantic Ocean; lagoon system",
+      "namedPorts": "Apapa Port; Tin Can Island Port; Lekki Deep Sea Port (new); largest Nigerian port complex",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1211,9 +1656,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 33
+      "compositeScore": 30
     },
     {
       "country": "Nigeria",
@@ -1230,6 +1676,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -1246,9 +1704,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 34
+      "compositeScore": 32
     },
     {
       "country": "Nigeria",
@@ -1265,6 +1724,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1281,9 +1752,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1300,6 +1772,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical humid",
+      "terrainType": "Rolling hills, coastal plain",
+      "elevationRange": "0–300",
+      "avgTemperature": "27",
+      "annualRainfall": "1400",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Gateway state to Lagos; industrialising; hilly interior",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1316,9 +1800,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1335,6 +1820,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1351,9 +1848,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1370,6 +1868,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1386,9 +1896,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1405,6 +1916,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1421,9 +1944,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1440,6 +1964,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -1456,9 +1992,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 34
+      "compositeScore": 32
     },
     {
       "country": "Nigeria",
@@ -1475,6 +2012,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical humid",
+      "terrainType": "Niger Delta, mangroves, creeks",
+      "elevationRange": "0–20",
+      "avgTemperature": "27",
+      "annualRainfall": "2400",
+      "floodRisk": "Very High",
+      "droughtRisk": "Low",
+      "topographyNotes": "Niger Delta; extensive mangroves; highest rainfall in Nigeria; oil infrastructure",
+      "namedPorts": "Port Harcourt (oil terminal focus); Bonny LNG terminal; Onne Port (oil services)",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1491,9 +2040,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1510,6 +2060,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1526,9 +2088,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1545,6 +2108,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1561,9 +2136,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     },
     {
       "country": "Nigeria",
@@ -1580,6 +2156,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1596,9 +2184,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Nigeria",
@@ -1615,6 +2204,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed plains and hills",
+      "elevationRange": "100–600",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Nigerian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRC; Lagos–Ibadan SGR; Abuja–Kaduna SGR; Lagos Blue Line (LRT)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1631,9 +2232,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 0
       },
-      "compositeScore": 30
+      "compositeScore": 28
     }
   ],
   "Kenya": [
@@ -1652,6 +2254,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -1668,9 +2282,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Kenya",
@@ -1687,6 +2302,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -1703,9 +2330,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Kenya",
@@ -1722,6 +2350,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -1738,9 +2378,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Kenya",
@@ -1757,6 +2398,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -1773,9 +2426,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Kenya",
@@ -1792,6 +2446,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -1808,9 +2474,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Kenya",
@@ -1827,6 +2494,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "Mt Kenya lower slopes",
+      "elevationRange": "900–4000",
+      "avgTemperature": "20",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Mt Kenya lower slopes; coffee and tea; fertile volcanic",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -1843,9 +2522,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Kenya",
@@ -1862,6 +2542,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid",
+      "terrainType": "Flat semi-desert, Tana River",
+      "elevationRange": "50–400",
+      "avgTemperature": "32",
+      "annualRainfall": "200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Tana River floods; otherwise very dry; al-Shabaab security risk",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -1878,9 +2570,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 39
+      "compositeScore": 38
     },
     {
       "country": "Kenya",
@@ -1897,6 +2590,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -1913,9 +2618,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 40
+      "compositeScore": 41
     },
     {
       "country": "Kenya",
@@ -1932,6 +2638,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid",
+      "terrainType": "Savanna, northern rangeland",
+      "elevationRange": "600–1800",
+      "avgTemperature": "26",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Gateway to northern Kenya; Matthews Range; pastoral",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1948,9 +2666,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Kenya",
@@ -1967,6 +2686,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -1983,9 +2714,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Kenya",
@@ -2002,6 +2734,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -2018,9 +2762,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Kenya",
@@ -2037,6 +2782,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -2053,9 +2810,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Kenya",
@@ -2072,6 +2830,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "Central highlands",
+      "elevationRange": "1500–2500",
+      "avgTemperature": "18",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Fertile tea and coffee highlands; Aberdare foothills",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -2088,9 +2858,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Kenya",
@@ -2107,6 +2878,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2123,9 +2906,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 44
     },
     {
       "country": "Kenya",
@@ -2142,6 +2926,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -2158,9 +2954,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Kenya",
@@ -2177,6 +2974,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -2193,9 +3002,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Kenya",
@@ -2212,6 +3022,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Lake Victoria basin",
+      "elevationRange": "1100–1600",
+      "avgTemperature": "23",
+      "annualRainfall": "1200",
+      "floodRisk": "High",
+      "droughtRisk": "Low",
+      "topographyNotes": "Lake Victoria shores; humid; flooding risk from lake and rivers",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -2228,7 +3050,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 65,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 75
+        "waterAvailability": 75,
+        "crime": 60
       },
       "compositeScore": 52
     },
@@ -2247,6 +3070,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -2263,9 +3098,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Kenya",
@@ -2282,6 +3118,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2298,9 +3146,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 44
     },
     {
       "country": "Kenya",
@@ -2317,6 +3166,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -2333,9 +3194,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Kenya",
@@ -2352,6 +3214,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2368,9 +3242,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2387,6 +3262,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2403,9 +3290,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2422,6 +3310,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2438,9 +3338,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2457,6 +3358,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid",
+      "terrainType": "Flat desert",
+      "elevationRange": "200–500",
+      "avgTemperature": "33",
+      "annualRainfall": "150",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Hottest part of Kenya; Ethiopia/Somalia border; very arid",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -2473,9 +3386,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 32
+      "compositeScore": 31
     },
     {
       "country": "Kenya",
@@ -2492,6 +3406,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid/Semi-arid",
+      "terrainType": "Volcanic mountains in desert",
+      "elevationRange": "400–1700",
+      "avgTemperature": "24",
+      "annualRainfall": "350",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Marsabit volcano in otherwise arid landscape; unique microclimate",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -2508,9 +3434,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 32
+      "compositeScore": 34
     },
     {
       "country": "Kenya",
@@ -2527,6 +3454,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Temperate/Tropical highland",
+      "terrainType": "Mt Kenya slopes",
+      "elevationRange": "500–5199",
+      "avgTemperature": "19",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Mt Kenya (5199m Africa 2nd highest); fertile slopes; diverse altitude zones",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2543,9 +3482,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2562,6 +3502,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2578,9 +3530,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2597,6 +3550,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Coastal lowland, coral reef",
+      "elevationRange": "0–100",
+      "avgTemperature": "27",
+      "annualRainfall": "1000",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Hot humid coast; Indian Ocean; coral reefs; mangroves",
+      "namedPorts": "Port of Mombasa (East Africa primary hub); Standard Gauge Railway inland connection",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2613,7 +3578,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
       "compositeScore": 44
     },
@@ -2632,6 +3598,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2648,9 +3626,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2667,6 +3646,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Temperate highland",
+      "terrainType": "Plateau, ridge-valley",
+      "elevationRange": "1600–1800",
+      "avgTemperature": "19",
+      "annualRainfall": "850",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Nairobi sits on plateau; Ngong Hills nearby; moderate bimodal rainfall",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2683,9 +3674,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 42
+      "compositeScore": 41
     },
     {
       "country": "Kenya",
@@ -2702,6 +3694,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Temperate highland",
+      "terrainType": "Rift Valley floor and walls",
+      "elevationRange": "1700–2800",
+      "avgTemperature": "17",
+      "annualRainfall": "900",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Great Rift Valley; Lake Nakuru flamingos; fertile volcanic soils",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2718,9 +3722,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2737,6 +3742,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2753,9 +3770,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2772,6 +3790,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2788,9 +3818,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2807,6 +3838,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2823,9 +3866,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2842,6 +3886,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2858,9 +3914,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2877,6 +3934,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2893,9 +3962,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2912,6 +3982,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -2928,9 +4010,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 32
+      "compositeScore": 34
     },
     {
       "country": "Kenya",
@@ -2947,6 +4030,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2963,9 +4058,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -2982,6 +4078,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -2998,9 +4106,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -3017,6 +4126,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -3033,9 +4154,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -3052,6 +4174,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -3068,9 +4202,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -3087,6 +4222,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -3103,9 +4250,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -3122,6 +4270,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid",
+      "terrainType": "Semi-desert, lake basin",
+      "elevationRange": "350–1400",
+      "avgTemperature": "30",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Very hot and dry; Lake Turkana; oil deposits; pastoral",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -3138,9 +4298,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 50
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Kenya",
@@ -3157,6 +4318,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -3173,9 +4346,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -3192,6 +4366,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -3208,9 +4394,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     },
     {
       "country": "Kenya",
@@ -3227,6 +4414,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -3243,9 +4442,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Kenya",
@@ -3262,6 +4462,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid savanna",
+      "terrainType": "Mixed savanna and highlands",
+      "elevationRange": "500–2000",
+      "avgTemperature": "22",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Kenyan savanna-highland transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Standard Gauge Railway (SGR): Mombasa–Nairobi–Naivasha; Nairobi–Kisumu (metre gauge); Nairobi–Nanyuki (metre gauge)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -3278,9 +4490,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 42
+      "compositeScore": 43
     }
   ],
   "Egypt": [
@@ -3299,6 +4512,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "High",
+      "climateZone": "Mediterranean",
+      "terrainType": "Nile Delta coast",
+      "elevationRange": "0–20",
+      "avgTemperature": "20",
+      "annualRainfall": "200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Mediterranean climate; sea-level; coastal flooding risk; Nile Delta",
+      "namedPorts": "Port of Alexandria; Port Said (Suez Canal northern entrance — critical global chokepoint for 12% world trade)",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 75,
         "power": 75,
@@ -3315,9 +4540,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 75,
         "incentiveReliability": 50,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 40
       },
-      "compositeScore": 61
+      "compositeScore": 60
     },
     {
       "country": "Egypt",
@@ -3334,6 +4560,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Hyper-arid desert",
+      "terrainType": "Nile valley, rocky desert",
+      "elevationRange": "80–200",
+      "avgTemperature": "26",
+      "annualRainfall": "1",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Virtually zero rainfall; Nile dam and lake; extreme heat; desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3350,7 +4588,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 49
     },
@@ -3369,6 +4608,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3385,7 +4636,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 49
     },
@@ -3404,6 +4656,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3420,7 +4684,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 49
     },
@@ -3439,6 +4704,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3455,7 +4732,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 49
     },
@@ -3474,6 +4752,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very High",
+      "climateZone": "Arid desert",
+      "terrainType": "Nile valley and delta edge",
+      "elevationRange": "20–100",
+      "avgTemperature": "22",
+      "annualRainfall": "25",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Nile River dependent; virtually no rainfall; desert surrounds city",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 75,
         "power": 75,
@@ -3490,9 +4780,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 85,
         "tradeCorridor": 75,
         "incentiveReliability": 50,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 40
       },
-      "compositeScore": 62
+      "compositeScore": 60
     },
     {
       "country": "Egypt",
@@ -3509,6 +4800,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3525,7 +4828,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 49
     },
@@ -3544,6 +4848,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3560,7 +4876,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 49
     },
@@ -3579,6 +4896,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3595,7 +4924,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 50
     },
@@ -3614,6 +4944,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3630,7 +4972,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 50
     },
@@ -3649,6 +4992,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3665,7 +5020,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 50
     },
@@ -3684,6 +5040,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3700,7 +5068,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 50
     },
@@ -3719,6 +5088,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3735,7 +5116,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 50
     },
@@ -3754,6 +5136,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3770,7 +5164,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 50
     },
@@ -3789,6 +5184,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3805,7 +5212,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 50
     },
@@ -3824,6 +5232,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3840,7 +5260,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 40
       },
       "compositeScore": 50
     },
@@ -3859,6 +5280,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3875,7 +5308,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 50
     },
@@ -3894,6 +5328,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Hyper-arid",
+      "terrainType": "Western Desert",
+      "elevationRange": "0–1000",
+      "avgTemperature": "24",
+      "annualRainfall": "1",
+      "floodRisk": "Very Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Western Desert; oases; virtually uninhabited; ancient trade routes",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3910,7 +5356,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 50
     },
@@ -3929,6 +5376,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3945,7 +5404,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 50
     },
@@ -3964,6 +5424,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -3980,9 +5452,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
-      "compositeScore": 51
+      "compositeScore": 50
     },
     {
       "country": "Egypt",
@@ -3999,6 +5472,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -4015,7 +5500,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 44
     },
@@ -4034,6 +5520,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -4050,7 +5548,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 44
     },
@@ -4069,6 +5568,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid",
+      "terrainType": "Desert coast, Red Sea",
+      "elevationRange": "0–2100",
+      "avgTemperature": "26",
+      "annualRainfall": "10",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Red Sea coast; zero rainfall; oil fields; tourist resorts; strategic shipping",
+      "namedPorts": "Safaga port; Ain Sukhna; Red Sea shipping lane (Bab-el-Mandeb approach)",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 65,
@@ -4085,7 +5596,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 46
     },
@@ -4104,6 +5616,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -4120,7 +5644,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 44
     },
@@ -4139,6 +5664,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -4155,7 +5692,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 44
     },
@@ -4174,6 +5712,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -4190,7 +5740,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 39
     },
@@ -4209,6 +5760,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid desert",
+      "terrainType": "Desert with Nile corridor",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "20",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Typical Egyptian desert",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ENR (5085km); Cairo Metro; Alexandria tram; Luxor–Aswan tourist railway",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -4225,7 +5788,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 44
     }
@@ -4246,6 +5810,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Mediterranean / Semi-arid",
+      "terrainType": "Mixed coastal and interior",
+      "elevationRange": "0–1500",
+      "avgTemperature": "19",
+      "annualRainfall": "350",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Moroccan climate",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 75,
@@ -4262,9 +5838,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 56
+      "compositeScore": 55
     },
     {
       "country": "Morocco",
@@ -4281,6 +5858,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very High",
+      "climateZone": "Mediterranean / Semi-arid",
+      "terrainType": "Atlantic coastal plain",
+      "elevationRange": "0–600",
+      "avgTemperature": "18",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Atlantic climate; mild; industrial hub; accessible coast",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 75,
         "power": 75,
@@ -4297,9 +5886,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 85,
         "tradeCorridor": 75,
         "incentiveReliability": 65,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 30
       },
-      "compositeScore": 67
+      "compositeScore": 65
     },
     {
       "country": "Morocco",
@@ -4316,6 +5906,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Mediterranean / Semi-arid",
+      "terrainType": "Mixed coastal and interior",
+      "elevationRange": "0–1500",
+      "avgTemperature": "19",
+      "annualRainfall": "350",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Moroccan climate",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 75,
@@ -4332,9 +5934,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 56
+      "compositeScore": 55
     },
     {
       "country": "Morocco",
@@ -4351,6 +5954,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Mediterranean / Semi-arid",
+      "terrainType": "Mixed coastal and interior",
+      "elevationRange": "0–1500",
+      "avgTemperature": "19",
+      "annualRainfall": "350",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Moroccan climate",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 75,
@@ -4367,9 +5982,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 56
+      "compositeScore": 55
     },
     {
       "country": "Morocco",
@@ -4386,6 +6002,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Mediterranean / Semi-arid",
+      "terrainType": "Mixed coastal and interior",
+      "elevationRange": "0–1500",
+      "avgTemperature": "19",
+      "annualRainfall": "350",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Moroccan climate",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 75,
@@ -4402,9 +6030,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 56
+      "compositeScore": 55
     },
     {
       "country": "Morocco",
@@ -4421,6 +6050,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Mediterranean / Semi-arid",
+      "terrainType": "Mixed coastal and interior",
+      "elevationRange": "0–1500",
+      "avgTemperature": "19",
+      "annualRainfall": "350",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Moroccan climate",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 75,
@@ -4437,9 +6078,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 56
+      "compositeScore": 55
     },
     {
       "country": "Morocco",
@@ -4456,6 +6098,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Mediterranean / Semi-arid",
+      "terrainType": "Mixed coastal and interior",
+      "elevationRange": "0–1500",
+      "avgTemperature": "19",
+      "annualRainfall": "350",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Moroccan climate",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 75,
@@ -4472,9 +6126,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 56
+      "compositeScore": 55
     },
     {
       "country": "Morocco",
@@ -4491,6 +6146,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Semi-arid",
+      "terrainType": "Atlas Mountains, pre-Saharan",
+      "elevationRange": "400–4165",
+      "avgTemperature": "20",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "High Atlas (Toubkal 4165m highest in N.Africa); semi-arid to arid transition",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 65,
         "power": 75,
@@ -4507,9 +6174,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 61
+      "compositeScore": 59
     },
     {
       "country": "Morocco",
@@ -4526,6 +6194,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Semi-arid",
+      "terrainType": "Plateau, Rif foothills",
+      "elevationRange": "200–2400",
+      "avgTemperature": "18",
+      "annualRainfall": "300",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Algeria border; Oujda; semi-arid; Mediterranean coast (Nador)",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 75,
@@ -4542,9 +6222,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 56
+      "compositeScore": 55
     },
     {
       "country": "Morocco",
@@ -4561,6 +6242,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Mediterranean / Semi-arid",
+      "terrainType": "Mixed coastal and interior",
+      "elevationRange": "0–1500",
+      "avgTemperature": "19",
+      "annualRainfall": "350",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Moroccan climate",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 75,
@@ -4577,9 +6270,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 56
+      "compositeScore": 55
     },
     {
       "country": "Morocco",
@@ -4596,6 +6290,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Semi-arid / Mediterranean",
+      "terrainType": "Atlantic coast, Anti-Atlas",
+      "elevationRange": "0–2700",
+      "avgTemperature": "19",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Agadir coast; fertile Souss Valley; argan trees; tourism and agriculture",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 75,
@@ -4612,9 +6318,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 59
+      "compositeScore": 57
     },
     {
       "country": "Morocco",
@@ -4631,6 +6338,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very High",
+      "climateZone": "Mediterranean / Semi-arid",
+      "terrainType": "Mixed coastal and interior",
+      "elevationRange": "0–1500",
+      "avgTemperature": "19",
+      "annualRainfall": "350",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Moroccan climate",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "ONCF (1907km); Al Boraq HSR (Tangier–Casablanca, 320km/h); TGV expansion planned",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 85,
         "power": 75,
@@ -4647,9 +6366,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 85,
         "incentiveReliability": 65,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 30
       },
-      "compositeScore": 68
+      "compositeScore": 66
     }
   ],
   "Ethiopia": [
@@ -4668,6 +6388,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium–High",
+      "climateZone": "Temperate highland",
+      "terrainType": "Plateau, city at 2300m",
+      "elevationRange": "2000–2500",
+      "avgTemperature": "16",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Addis Ababa at 2355m — one of highest capitals in world; mild climate",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -4684,7 +6416,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 51
     },
@@ -4703,6 +6436,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Hyper-arid",
+      "terrainType": "Danakil Depression (lowest in Africa)",
+      "elevationRange": "-125–1500",
+      "avgTemperature": "34",
+      "annualRainfall": "150",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Danakil Depression (-125m, hottest place on Earth); active volcanoes; extreme heat",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -4719,7 +6464,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 30
     },
@@ -4738,6 +6484,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate/cool highland",
+      "terrainType": "Ethiopian highlands, valleys",
+      "elevationRange": "1500–4500",
+      "avgTemperature": "16",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Simien Mountains (4543m); Lake Tana; Blue Nile source; fertile highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -4754,9 +6512,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Ethiopia",
@@ -4773,6 +6532,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid highland",
+      "terrainType": "Mixed highlands",
+      "elevationRange": "1000–3000",
+      "avgTemperature": "20",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ethiopian highland",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -4789,9 +6560,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Ethiopia",
@@ -4808,6 +6580,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid highland",
+      "terrainType": "Mixed highlands",
+      "elevationRange": "1000–3000",
+      "avgTemperature": "20",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ethiopian highland",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -4824,9 +6608,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Ethiopia",
@@ -4843,6 +6628,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid highland",
+      "terrainType": "Mixed highlands",
+      "elevationRange": "1000–3000",
+      "avgTemperature": "20",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ethiopian highland",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -4859,9 +6656,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Ethiopia",
@@ -4878,6 +6676,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid highland",
+      "terrainType": "Mixed highlands",
+      "elevationRange": "1000–3000",
+      "avgTemperature": "20",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ethiopian highland",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -4894,9 +6704,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Ethiopia",
@@ -4913,6 +6724,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical highland/sub-humid",
+      "terrainType": "Varied — highlands to lowlands",
+      "elevationRange": "500–4000",
+      "avgTemperature": "20",
+      "annualRainfall": "900",
+      "floodRisk": "Medium",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Largest region; Bale Mountains; coffee belt; Great Rift Valley portion",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -4929,9 +6752,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 44
+      "compositeScore": 45
     },
     {
       "country": "Ethiopia",
@@ -4948,6 +6772,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid highland",
+      "terrainType": "Mixed highlands",
+      "elevationRange": "1000–3000",
+      "avgTemperature": "20",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ethiopian highland",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -4964,9 +6800,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Ethiopia",
@@ -4983,6 +6820,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid",
+      "terrainType": "Flat semi-desert, Ogaden",
+      "elevationRange": "200–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Ogaden plateau; very arid; pastoral; conflict-affected; drought-prone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -4999,9 +6848,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
-      "compositeScore": 30
+      "compositeScore": 29
     },
     {
       "country": "Ethiopia",
@@ -5018,6 +6868,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid highland",
+      "terrainType": "Mixed highlands",
+      "elevationRange": "1000–3000",
+      "avgTemperature": "20",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ethiopian highland",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -5034,9 +6896,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Ethiopia",
@@ -5053,6 +6916,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid highland",
+      "terrainType": "Mixed highlands",
+      "elevationRange": "1000–3000",
+      "avgTemperature": "20",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ethiopian highland",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -5069,9 +6944,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 39
+      "compositeScore": 40
     },
     {
       "country": "Ethiopia",
@@ -5088,6 +6964,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid highland",
+      "terrainType": "Rugged mountains, valleys",
+      "elevationRange": "600–3900",
+      "avgTemperature": "18",
+      "annualRainfall": "600",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Mountainous; drought-prone; conflict-affected; Tekeze River canyon",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -5104,9 +6992,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 10
       },
-      "compositeScore": 34
+      "compositeScore": 32
     },
     {
       "country": "Ethiopia",
@@ -5123,6 +7012,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Sub-humid highland",
+      "terrainType": "Mixed highlands",
+      "elevationRange": "1000–3000",
+      "avgTemperature": "20",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ethiopian highland",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis Ababa–Djibouti Railway (standard gauge, electrified, 756km)",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -5139,9 +7040,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 39
+      "compositeScore": 40
     }
   ],
   "Zambia": [
@@ -5160,6 +7062,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Plateau, miombo woodland",
+      "elevationRange": "900–1400",
+      "avgTemperature": "22",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zambian miombo plateau",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Dar es Salaam); Zambia Railways (to Zimbabwe); Copperbelt lines",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -5176,9 +7090,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 45
+      "compositeScore": 46
     },
     {
       "country": "Zambia",
@@ -5195,6 +7110,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Plateau, miombo woodland",
+      "elevationRange": "900–1400",
+      "avgTemperature": "22",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zambian miombo plateau",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Dar es Salaam); Zambia Railways (to Zimbabwe); Copperbelt lines",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -5211,9 +7138,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 45
+      "compositeScore": 46
     },
     {
       "country": "Zambia",
@@ -5230,6 +7158,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Plateau, miombo woodland",
+      "elevationRange": "900–1400",
+      "avgTemperature": "22",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zambian miombo plateau",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Dar es Salaam); Zambia Railways (to Zimbabwe); Copperbelt lines",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -5246,9 +7186,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 45
+      "compositeScore": 46
     },
     {
       "country": "Zambia",
@@ -5265,6 +7206,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Plateau, miombo woodland",
+      "elevationRange": "900–1400",
+      "avgTemperature": "22",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zambian miombo plateau",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Dar es Salaam); Zambia Railways (to Zimbabwe); Copperbelt lines",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -5281,9 +7234,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 45
+      "compositeScore": 46
     },
     {
       "country": "Zambia",
@@ -5300,6 +7254,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Plateau, miombo woodland",
+      "elevationRange": "900–1400",
+      "avgTemperature": "22",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zambian miombo plateau",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Dar es Salaam); Zambia Railways (to Zimbabwe); Copperbelt lines",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -5316,9 +7282,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 45
+      "compositeScore": 46
     },
     {
       "country": "Zambia",
@@ -5335,6 +7302,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Plateau, miombo woodland",
+      "elevationRange": "900–1400",
+      "avgTemperature": "22",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zambian miombo plateau",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Dar es Salaam); Zambia Railways (to Zimbabwe); Copperbelt lines",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -5351,9 +7330,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 45
+      "compositeScore": 46
     },
     {
       "country": "Zambia",
@@ -5370,6 +7350,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Plateau, miombo woodland",
+      "elevationRange": "900–1400",
+      "avgTemperature": "22",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zambian miombo plateau",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Dar es Salaam); Zambia Railways (to Zimbabwe); Copperbelt lines",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -5386,9 +7378,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 45
+      "compositeScore": 46
     },
     {
       "country": "Zambia",
@@ -5405,6 +7398,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Plateau, miombo woodland",
+      "elevationRange": "900–1400",
+      "avgTemperature": "22",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zambian miombo plateau",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Dar es Salaam); Zambia Railways (to Zimbabwe); Copperbelt lines",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -5421,9 +7426,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 45
+      "compositeScore": 46
     },
     {
       "country": "Zambia",
@@ -5440,6 +7446,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Plateau, miombo woodland",
+      "elevationRange": "900–1400",
+      "avgTemperature": "22",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zambian miombo plateau",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Dar es Salaam); Zambia Railways (to Zimbabwe); Copperbelt lines",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -5456,9 +7474,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 45
+      "compositeScore": 46
     },
     {
       "country": "Zambia",
@@ -5475,6 +7494,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Plateau, miombo woodland",
+      "elevationRange": "900–1400",
+      "avgTemperature": "22",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zambian miombo plateau",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Dar es Salaam); Zambia Railways (to Zimbabwe); Copperbelt lines",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -5491,9 +7522,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 45
+      "compositeScore": 46
     }
   ],
   "Zimbabwe": [
@@ -5512,6 +7544,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Temperate/sub-humid",
+      "terrainType": "Mixed highveld",
+      "elevationRange": "900–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zimbabwean highveld",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRZ (2,760km); Victoria Falls–Bulawayo–Harare–Mutare corridor; TAZARA connection",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": 25,
@@ -5528,7 +7572,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
       "compositeScore": 38
     },
@@ -5547,6 +7592,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Temperate highland",
+      "terrainType": "Highveld plateau",
+      "elevationRange": "1400–1500",
+      "avgTemperature": "18",
+      "annualRainfall": "830",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Capital on Highveld; comfortable climate; jacaranda trees; altitude moderates heat",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRZ (2,760km); Victoria Falls–Bulawayo–Harare–Mutare corridor; TAZARA connection",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 50,
         "power": 25,
@@ -5563,7 +7620,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
       "compositeScore": 43
     },
@@ -5582,6 +7640,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Temperate/sub-humid",
+      "terrainType": "Mixed highveld",
+      "elevationRange": "900–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zimbabwean highveld",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRZ (2,760km); Victoria Falls–Bulawayo–Harare–Mutare corridor; TAZARA connection",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -5598,9 +7668,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Zimbabwe",
@@ -5617,6 +7688,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Temperate/sub-humid",
+      "terrainType": "Mixed highveld",
+      "elevationRange": "900–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zimbabwean highveld",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRZ (2,760km); Victoria Falls–Bulawayo–Harare–Mutare corridor; TAZARA connection",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -5633,9 +7716,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Zimbabwe",
@@ -5652,6 +7736,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Temperate/sub-humid",
+      "terrainType": "Mixed highveld",
+      "elevationRange": "900–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zimbabwean highveld",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRZ (2,760km); Victoria Falls–Bulawayo–Harare–Mutare corridor; TAZARA connection",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -5668,9 +7764,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Zimbabwe",
@@ -5687,6 +7784,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Temperate/sub-humid",
+      "terrainType": "Mixed highveld",
+      "elevationRange": "900–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zimbabwean highveld",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRZ (2,760km); Victoria Falls–Bulawayo–Harare–Mutare corridor; TAZARA connection",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -5703,9 +7812,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Zimbabwe",
@@ -5722,6 +7832,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Temperate/sub-humid",
+      "terrainType": "Mixed highveld",
+      "elevationRange": "900–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zimbabwean highveld",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRZ (2,760km); Victoria Falls–Bulawayo–Harare–Mutare corridor; TAZARA connection",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -5738,9 +7860,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Zimbabwe",
@@ -5757,6 +7880,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Temperate/sub-humid",
+      "terrainType": "Mixed highveld",
+      "elevationRange": "900–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zimbabwean highveld",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRZ (2,760km); Victoria Falls–Bulawayo–Harare–Mutare corridor; TAZARA connection",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -5773,9 +7908,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Zimbabwe",
@@ -5792,6 +7928,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Temperate/sub-humid",
+      "terrainType": "Mixed highveld",
+      "elevationRange": "900–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zimbabwean highveld",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRZ (2,760km); Victoria Falls–Bulawayo–Harare–Mutare corridor; TAZARA connection",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -5808,9 +7956,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Zimbabwe",
@@ -5827,6 +7976,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Temperate/sub-humid",
+      "terrainType": "Mixed highveld",
+      "elevationRange": "900–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Zimbabwean highveld",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "NRZ (2,760km); Victoria Falls–Bulawayo–Harare–Mutare corridor; TAZARA connection",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -5843,9 +8004,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     }
   ],
   "Senegal": [
@@ -5864,6 +8026,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "High",
+      "climateZone": "Semi-arid (Sahel)",
+      "terrainType": "Cape Verde Peninsula, coastal",
+      "elevationRange": "0–100",
+      "avgTemperature": "24",
+      "annualRainfall": "540",
+      "floodRisk": "Medium",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Atlantic Ocean; Cape Verde promontory; sea breeze moderates heat; coastal flooding",
+      "namedPorts": "Port of Dakar (West Africa major port; Dakar-Bamako railway)",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 75,
         "power": 65,
@@ -5880,9 +8054,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 75,
         "incentiveReliability": 65,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 64
+      "compositeScore": 63
     },
     {
       "country": "Senegal",
@@ -5899,6 +8074,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid Sahel",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "0–100",
+      "avgTemperature": "28",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Senegalese Sahel",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -5915,7 +8102,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -5934,6 +8122,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid Sahel",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "0–100",
+      "avgTemperature": "28",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Senegalese Sahel",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -5950,7 +8150,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -5969,6 +8170,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid Sahel",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "0–100",
+      "avgTemperature": "28",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Senegalese Sahel",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -5985,7 +8198,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -6004,6 +8218,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid Sahel",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "0–100",
+      "avgTemperature": "28",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Senegalese Sahel",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -6020,7 +8246,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -6039,6 +8266,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid Sahel",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "0–100",
+      "avgTemperature": "28",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Senegalese Sahel",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -6055,7 +8294,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -6074,6 +8314,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid Sahel",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "0–100",
+      "avgTemperature": "28",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Senegalese Sahel",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -6090,7 +8342,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -6109,6 +8362,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid Sahel",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "0–100",
+      "avgTemperature": "28",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Senegalese Sahel",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -6125,7 +8390,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -6144,6 +8410,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid Sahel",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "0–100",
+      "avgTemperature": "28",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Senegalese Sahel",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -6160,7 +8438,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -6179,6 +8458,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Semi-arid",
+      "terrainType": "Senegal River delta, coast",
+      "elevationRange": "0–50",
+      "avgTemperature": "26",
+      "annualRainfall": "340",
+      "floodRisk": "High",
+      "droughtRisk": "High",
+      "topographyNotes": "Senegal River flooding; coastal erosion; Sahel climate; northern Senegal",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -6195,9 +8486,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 50
+      "compositeScore": 49
     },
     {
       "country": "Senegal",
@@ -6214,6 +8506,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid Sahel",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "0–100",
+      "avgTemperature": "28",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Senegalese Sahel",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -6230,7 +8534,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -6249,6 +8554,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid Sahel",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "0–100",
+      "avgTemperature": "28",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Senegalese Sahel",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -6265,7 +8582,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -6284,6 +8602,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Semi-arid",
+      "terrainType": "Plateau, peanut basin",
+      "elevationRange": "50–200",
+      "avgTemperature": "27",
+      "annualRainfall": "530",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Peanut basin; plateau; Dakar satellite region; phosphates",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -6300,9 +8630,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 50
+      "compositeScore": 49
     },
     {
       "country": "Senegal",
@@ -6319,6 +8650,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid Sahel",
+      "terrainType": "Flat Sahel plain",
+      "elevationRange": "0–100",
+      "avgTemperature": "28",
+      "annualRainfall": "500",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Senegalese Sahel",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Dakar–Bamako railway (historical; limited service); Dakar Regional Express Train (TER)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -6335,9 +8678,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 40
+      "compositeScore": 39
     }
   ],
   "Algeria": [
@@ -6356,6 +8700,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6372,9 +8728,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6391,6 +8748,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6407,9 +8776,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6426,6 +8796,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6442,9 +8824,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6461,6 +8844,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium–High",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "Port of Algiers; Oran Port; Annaba Port",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 75,
         "power": 75,
@@ -6477,9 +8872,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 75,
         "incentiveReliability": 65,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 60
       },
-      "compositeScore": 62
+      "compositeScore": 61
     },
     {
       "country": "Algeria",
@@ -6496,6 +8892,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6512,9 +8920,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6531,6 +8940,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6547,9 +8968,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6566,6 +8988,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6582,9 +9016,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6601,6 +9036,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6617,9 +9064,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6636,6 +9084,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6652,9 +9112,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6671,6 +9132,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6687,9 +9160,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6706,6 +9180,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6722,9 +9208,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6741,6 +9228,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6757,9 +9256,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6776,6 +9276,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6792,9 +9304,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6811,6 +9324,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6827,9 +9352,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6846,6 +9372,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 65,
         "power": 75,
@@ -6862,7 +9400,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 65,
         "tradeCorridor": 65,
         "incentiveReliability": 50,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 60
       },
       "compositeScore": 53
     },
@@ -6881,6 +9420,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6897,9 +9448,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6916,6 +9468,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6932,9 +9496,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 38
+      "compositeScore": 39
     },
     {
       "country": "Algeria",
@@ -6951,6 +9516,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -6967,9 +9544,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -6986,6 +9564,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7002,9 +9592,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7021,6 +9612,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7037,9 +9640,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7056,6 +9660,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7072,9 +9688,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7091,6 +9708,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7107,9 +9736,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7126,6 +9756,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7142,9 +9784,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7161,6 +9804,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7177,9 +9832,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7196,6 +9852,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7212,9 +9880,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7231,6 +9900,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7247,9 +9928,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7266,6 +9948,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7282,9 +9976,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7301,6 +9996,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7317,9 +10024,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7336,6 +10044,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7352,9 +10072,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7371,6 +10092,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7387,9 +10120,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7406,6 +10140,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7422,9 +10168,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7441,6 +10188,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 65,
         "power": 75,
@@ -7457,7 +10216,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 65,
         "tradeCorridor": 65,
         "incentiveReliability": 50,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 60
       },
       "compositeScore": 53
     },
@@ -7476,6 +10236,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7492,9 +10264,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7511,6 +10284,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7527,9 +10312,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7546,6 +10332,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7562,9 +10360,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7581,6 +10380,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7597,9 +10408,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7616,6 +10428,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7632,9 +10456,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7651,6 +10476,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7667,9 +10504,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7686,6 +10524,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7702,9 +10552,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7721,6 +10572,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7737,9 +10600,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7756,6 +10620,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7772,9 +10648,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7791,6 +10668,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7807,9 +10696,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7826,6 +10716,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7842,9 +10744,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7861,6 +10764,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7877,9 +10792,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7896,6 +10812,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7912,9 +10840,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7931,6 +10860,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7947,9 +10888,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -7966,6 +10908,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -7982,9 +10936,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     },
     {
       "country": "Algeria",
@@ -8001,6 +10956,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNTF (4500km+); Algiers Metro; suburban rail; Constantine tramway",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -8017,9 +10984,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 37
+      "compositeScore": 38
     }
   ],
   "Angola": [
@@ -8038,6 +11006,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8054,9 +11034,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8073,6 +11054,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -8089,9 +11082,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 38
+      "compositeScore": 39
     },
     {
       "country": "Angola",
@@ -8108,6 +11102,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8124,9 +11130,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8143,6 +11150,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "High",
+      "climateZone": "Tropical humid",
+      "terrainType": "Coastal enclave, forest",
+      "elevationRange": "0–300",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Oil enclave separated from mainland; equatorial rainforest; high rainfall",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -8159,9 +11178,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 30
+      "compositeScore": 32
     },
     {
       "country": "Angola",
@@ -8178,6 +11198,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8194,9 +11226,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8213,6 +11246,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8229,9 +11274,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8248,6 +11294,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8264,9 +11322,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8283,6 +11342,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8299,9 +11370,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8318,6 +11390,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "Central plateau",
+      "elevationRange": "1700–2000",
+      "avgTemperature": "17",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Highest main city in Angola; railway terminus; agriculture",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8334,9 +11418,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 32
+      "compositeScore": 34
     },
     {
       "country": "Angola",
@@ -8353,6 +11438,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8369,9 +11466,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8388,6 +11486,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "High",
+      "climateZone": "Tropical semi-arid",
+      "terrainType": "Coastal desert, city",
+      "elevationRange": "0–200",
+      "avgTemperature": "24",
+      "annualRainfall": "350",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Benguela Current makes coast surprisingly dry; coastal desert; oil capital",
+      "namedPorts": "Port of Luanda; Lobito Port (Benguela Railway corridor to DRC/Zambia)",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 65,
         "power": 50,
@@ -8404,9 +11514,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 85,
         "tradeCorridor": 75,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 60
       },
-      "compositeScore": 45
+      "compositeScore": 46
     },
     {
       "country": "Angola",
@@ -8423,6 +11534,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Savanna, diamond fields",
+      "elevationRange": "900–1200",
+      "avgTemperature": "24",
+      "annualRainfall": "1300",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Diamond mining; savanna; Kasai River basin",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8439,9 +11562,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8458,6 +11582,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8474,9 +11610,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8493,6 +11630,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8509,9 +11658,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8528,6 +11678,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8544,9 +11706,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8563,6 +11726,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8579,9 +11754,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8598,6 +11774,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8614,9 +11802,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     },
     {
       "country": "Angola",
@@ -8633,6 +11822,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to inland",
+      "elevationRange": "0–1500",
+      "avgTemperature": "22",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Angolan savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Benguela Railway (Lobito–DRC border, 1344km, being restored); Luanda–Malanje",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -8649,9 +11850,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 30
     }
   ],
   "Tunisia": [
@@ -8670,6 +11872,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -8686,9 +11900,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -8705,6 +11920,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -8721,9 +11948,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -8740,6 +11968,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -8756,9 +11996,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -8775,6 +12016,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -8791,9 +12044,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -8810,6 +12064,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -8826,9 +12092,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -8845,6 +12112,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -8861,7 +12140,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 38
     },
@@ -8880,6 +12160,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -8896,9 +12188,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -8915,6 +12208,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -8931,7 +12236,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 38
     },
@@ -8950,6 +12256,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -8966,9 +12284,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -8985,6 +12304,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9001,9 +12332,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -9020,6 +12352,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9036,9 +12380,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -9055,6 +12400,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9071,9 +12428,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -9090,6 +12448,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9106,9 +12476,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -9125,6 +12496,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9141,9 +12524,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -9160,6 +12544,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9176,9 +12572,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -9195,6 +12592,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9211,9 +12620,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -9230,6 +12640,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 65,
         "power": 75,
@@ -9246,9 +12668,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 65,
         "incentiveReliability": 50,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 30
       },
-      "compositeScore": 56
+      "compositeScore": 54
     },
     {
       "country": "Tunisia",
@@ -9265,6 +12688,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9281,9 +12716,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -9300,6 +12736,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9316,9 +12764,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -9335,6 +12784,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 65,
         "power": 75,
@@ -9351,9 +12812,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 65,
         "incentiveReliability": 50,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 30
       },
-      "compositeScore": 56
+      "compositeScore": 54
     },
     {
       "country": "Tunisia",
@@ -9370,6 +12832,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9386,9 +12860,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -9405,6 +12880,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9421,9 +12908,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     },
     {
       "country": "Tunisia",
@@ -9440,6 +12928,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "High",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "Port of Tunis-La Goulette; Rades container port",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 75,
         "power": 75,
@@ -9456,9 +12956,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 85,
         "tradeCorridor": 75,
         "incentiveReliability": 65,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 30
       },
-      "compositeScore": 64
+      "compositeScore": 62
     },
     {
       "country": "Tunisia",
@@ -9475,6 +12976,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCFT (2,167km); Tunis Metro; Sfax–Gabes–Gafsa (phosphate rail)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -9491,9 +13004,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 37
+      "compositeScore": 36
     }
   ],
   "Ghana": [
@@ -9512,6 +13026,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed forest-savanna",
+      "elevationRange": "100–500",
+      "avgTemperature": "27",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ghanaian transition zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -9528,7 +13054,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 42
     },
@@ -9547,6 +13074,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Plateau, forest-savanna transition",
+      "elevationRange": "200–800",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Fertile plateau; Kumasi; cocoa and gold belt; relatively mild",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -9563,9 +13102,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 65,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 50
+      "compositeScore": 49
     },
     {
       "country": "Ghana",
@@ -9582,6 +13122,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed forest-savanna",
+      "elevationRange": "100–500",
+      "avgTemperature": "27",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ghanaian transition zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -9598,7 +13150,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 42
     },
@@ -9617,6 +13170,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed forest-savanna",
+      "elevationRange": "100–500",
+      "avgTemperature": "27",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ghanaian transition zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -9633,7 +13198,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 42
     },
@@ -9652,6 +13218,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed forest-savanna",
+      "elevationRange": "100–500",
+      "avgTemperature": "27",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ghanaian transition zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -9668,7 +13246,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 42
     },
@@ -9687,6 +13266,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed forest-savanna",
+      "elevationRange": "100–500",
+      "avgTemperature": "27",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ghanaian transition zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -9703,7 +13294,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 42
     },
@@ -9722,6 +13314,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "High",
+      "climateZone": "Tropical dry",
+      "terrainType": "Coastal lowland, savanna transition",
+      "elevationRange": "0–60",
+      "avgTemperature": "27",
+      "annualRainfall": "730",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Accra unusually dry for West Africa coast; Volta Delta; urban flooding",
+      "namedPorts": "Tema Port (Ghana primary port; Meridian deepwater terminal)",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 65,
         "power": 50,
@@ -9738,9 +13342,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 85,
         "tradeCorridor": 75,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 58
+      "compositeScore": 56
     },
     {
       "country": "Ghana",
@@ -9757,6 +13362,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed forest-savanna",
+      "elevationRange": "100–500",
+      "avgTemperature": "27",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ghanaian transition zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -9773,7 +13390,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 42
     },
@@ -9792,6 +13410,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical semi-arid",
+      "terrainType": "Flat savanna, White Volta",
+      "elevationRange": "150–400",
+      "avgTemperature": "29",
+      "annualRainfall": "900",
+      "floodRisk": "Medium",
+      "droughtRisk": "High",
+      "topographyNotes": "Hot dry savanna; White and Black Volta rivers; guinea savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -9808,7 +13438,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 36
     },
@@ -9827,6 +13458,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed forest-savanna",
+      "elevationRange": "100–500",
+      "avgTemperature": "27",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ghanaian transition zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -9843,7 +13486,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 42
     },
@@ -9862,6 +13506,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed forest-savanna",
+      "elevationRange": "100–500",
+      "avgTemperature": "27",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ghanaian transition zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -9878,7 +13534,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 42
     },
@@ -9897,6 +13554,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid savanna",
+      "terrainType": "Flat, Sahel fringe",
+      "elevationRange": "150–300",
+      "avgTemperature": "30",
+      "annualRainfall": "700",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Driest region; guinea savanna to Sahel; Bolgatanga; shea trees",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -9913,9 +13582,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 20
       },
-      "compositeScore": 36
+      "compositeScore": 35
     },
     {
       "country": "Ghana",
@@ -9932,6 +13602,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid savanna",
+      "terrainType": "Flat, Black Volta",
+      "elevationRange": "150–400",
+      "avgTemperature": "29",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Remote; Black Volta; savanna; shea and groundnuts; least developed",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -9948,9 +13630,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 20
       },
-      "compositeScore": 36
+      "compositeScore": 35
     },
     {
       "country": "Ghana",
@@ -9967,6 +13650,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed forest-savanna",
+      "elevationRange": "100–500",
+      "avgTemperature": "27",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ghanaian transition zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -9983,7 +13678,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 42
     },
@@ -10002,6 +13698,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Coastal rainforest, Volta basin",
+      "elevationRange": "0–400",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Highest rainfall in Ghana; rainforest; oil offshore (Jubilee field); cocoa",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -10018,9 +13726,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 65,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 50
+      "compositeScore": 49
     },
     {
       "country": "Ghana",
@@ -10037,6 +13746,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed forest-savanna",
+      "elevationRange": "100–500",
+      "avgTemperature": "27",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Ghanaian transition zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Ghana Railway Development Authority (947km; Accra–Kumasi; rehabilitation underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -10053,9 +13774,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 65,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 50
+      "compositeScore": 49
     }
   ],
   "Tanzania": [
@@ -10074,6 +13796,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Temperate highland",
+      "terrainType": "Mt Kilimanjaro/Meru slopes",
+      "elevationRange": "1400–5895",
+      "avgTemperature": "17",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Mt Kilimanjaro (5895m, Africa highest); Mt Meru; fertile volcanic soils; safari hub",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -10090,9 +13824,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 50
+      "compositeScore": 49
     },
     {
       "country": "Tanzania",
@@ -10109,6 +13844,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium–High",
+      "climateZone": "Tropical humid",
+      "terrainType": "Coastal lowland",
+      "elevationRange": "0–50",
+      "avgTemperature": "26",
+      "annualRainfall": "1100",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Hot humid coast; Indian Ocean; sea-level; monsoon seasons",
+      "namedPorts": "Dar es Salaam Port (major East Africa hub); TAZARA railway to Zambia",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 65,
         "power": 50,
@@ -10125,9 +13872,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 85,
         "tradeCorridor": 75,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 58
+      "compositeScore": 57
     },
     {
       "country": "Tanzania",
@@ -10144,6 +13892,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Semi-arid",
+      "terrainType": "Central plateau",
+      "elevationRange": "1000–1200",
+      "avgTemperature": "22",
+      "annualRainfall": "570",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Capital city; central plateau; semi-arid; grain farming",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -10160,9 +13920,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 38,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 45
+      "compositeScore": 44
     },
     {
       "country": "Tanzania",
@@ -10179,6 +13940,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10195,9 +13968,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10214,6 +13988,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10230,9 +14016,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10249,6 +14036,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10265,9 +14064,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10284,6 +14084,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10300,9 +14112,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10319,6 +14132,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10335,9 +14160,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10354,6 +14180,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10370,9 +14208,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10389,6 +14228,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10405,9 +14256,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10424,6 +14276,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10440,9 +14304,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10459,6 +14324,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10475,9 +14352,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10494,6 +14372,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "Southern highlands",
+      "elevationRange": "1700–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Southern highlands; fertile; tea and coffee; Tanzania-Zambia border",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10510,9 +14400,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10529,6 +14420,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10545,9 +14448,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10564,6 +14468,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10580,9 +14496,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10599,6 +14516,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Lake Victoria basin",
+      "elevationRange": "1100–1600",
+      "avgTemperature": "23",
+      "annualRainfall": "900",
+      "floodRisk": "High",
+      "droughtRisk": "Low",
+      "topographyNotes": "Lake Victoria; flooding risk; fish processing; cotton",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -10615,9 +14544,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 50
+      "compositeScore": 49
     },
     {
       "country": "Tanzania",
@@ -10634,6 +14564,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10650,9 +14592,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10669,6 +14612,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10685,9 +14640,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10704,6 +14660,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10720,9 +14688,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10739,6 +14708,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10755,9 +14736,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10774,6 +14756,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10790,9 +14784,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10809,6 +14804,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10825,9 +14832,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10844,6 +14852,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10860,9 +14880,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10879,6 +14900,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10895,9 +14928,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10914,6 +14948,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10930,9 +14976,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10949,6 +14996,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -10965,9 +15024,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -10984,6 +15044,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11000,9 +15072,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -11019,6 +15092,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11035,9 +15120,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -11054,6 +15140,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11070,9 +15168,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -11089,6 +15188,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11105,9 +15216,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Tanzania",
@@ -11124,6 +15236,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal to highland",
+      "elevationRange": "500–2000",
+      "avgTemperature": "24",
+      "annualRainfall": "800",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Typical Tanzanian savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TAZARA (to Zambia); SGR (Dar–Morogoro–Dodoma under construction); Central Line (metre gauge)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11140,9 +15264,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 36
+      "compositeScore": 37
     }
   ],
   "Rwanda": [
@@ -11161,6 +15286,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Savanna, Akagera",
+      "elevationRange": "1000–1700",
+      "avgTemperature": "22",
+      "annualRainfall": "900",
+      "floodRisk": "Medium",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Savanna lowlands; Akagera National Park; Tanzania border",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "No national railway; SGR Isaka–Kigali planned (connection to Tanzania network)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -11177,9 +15314,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 38,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 54
+      "compositeScore": 56
     },
     {
       "country": "Rwanda",
@@ -11196,6 +15334,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Temperate highland",
+      "terrainType": "Rolling hills, plateau",
+      "elevationRange": "1500–1800",
+      "avgTemperature": "19",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "City of a Thousand Hills; comfortable climate; no extreme weather",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "No national railway; SGR Isaka–Kigali planned (connection to Tanzania network)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 65,
         "power": 50,
@@ -11212,9 +15362,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 64
+      "compositeScore": 66
     },
     {
       "country": "Rwanda",
@@ -11231,6 +15382,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "Virunga volcanoes",
+      "elevationRange": "1500–4507",
+      "avgTemperature": "17",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Virunga volcanos; Parc des Volcans; mountain gorillas; fertile volcanic",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "No national railway; SGR Isaka–Kigali planned (connection to Tanzania network)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -11247,9 +15410,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 38,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 54
+      "compositeScore": 56
     },
     {
       "country": "Rwanda",
@@ -11266,6 +15430,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate sub-humid",
+      "terrainType": "Hills, valleys",
+      "elevationRange": "1400–2000",
+      "avgTemperature": "19",
+      "annualRainfall": "1100",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Tea-growing highlands; terraced hillsides",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "No national railway; SGR Isaka–Kigali planned (connection to Tanzania network)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -11282,9 +15458,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 38,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 54
+      "compositeScore": 56
     },
     {
       "country": "Rwanda",
@@ -11301,6 +15478,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "Congo-Nile ridge, Lake Kivu",
+      "elevationRange": "1500–4507",
+      "avgTemperature": "18",
+      "annualRainfall": "1300",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Highest terrain; Mt Karisimbi (4507m); gorilla habitat; Lake Kivu",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "No national railway; SGR Isaka–Kigali planned (connection to Tanzania network)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -11317,9 +15506,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 38,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 54
+      "compositeScore": 56
     }
   ],
   "Mozambique": [
@@ -11338,6 +15528,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Coastal, LNG fields offshore",
+      "elevationRange": "0–1000",
+      "avgTemperature": "25",
+      "annualRainfall": "1000",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "LNG gas fields offshore; tropical coast; insurgency affected; Rovuma basin",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "CFM (Beira, Maputo, Nacala corridors); Nacala Corridor (to Malawi)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -11354,9 +15556,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 28
+      "compositeScore": 26
     },
     {
       "country": "Mozambique",
@@ -11373,6 +15576,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal and inland",
+      "elevationRange": "0–800",
+      "avgTemperature": "24",
+      "annualRainfall": "1000",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Mozambican coast-to-interior",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "CFM (Beira, Maputo, Nacala corridors); Nacala Corridor (to Malawi)",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11389,9 +15604,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Mozambique",
@@ -11408,6 +15624,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal and inland",
+      "elevationRange": "0–800",
+      "avgTemperature": "24",
+      "annualRainfall": "1000",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Mozambican coast-to-interior",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "CFM (Beira, Maputo, Nacala corridors); Nacala Corridor (to Malawi)",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11424,9 +15652,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Mozambique",
@@ -11443,6 +15672,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal and inland",
+      "elevationRange": "0–800",
+      "avgTemperature": "24",
+      "annualRainfall": "1000",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Mozambican coast-to-interior",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "CFM (Beira, Maputo, Nacala corridors); Nacala Corridor (to Malawi)",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11459,9 +15700,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Mozambique",
@@ -11478,6 +15720,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium–High",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal and inland",
+      "elevationRange": "0–800",
+      "avgTemperature": "24",
+      "annualRainfall": "1000",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Mozambican coast-to-interior",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "CFM (Beira, Maputo, Nacala corridors); Nacala Corridor (to Malawi)",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 65,
         "power": 50,
@@ -11494,9 +15748,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 75,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 10
       },
-      "compositeScore": 48
+      "compositeScore": 46
     },
     {
       "country": "Mozambique",
@@ -11513,6 +15768,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium–High",
+      "climateZone": "Subtropical",
+      "terrainType": "Coastal lowland",
+      "elevationRange": "0–100",
+      "avgTemperature": "24",
+      "annualRainfall": "750",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Subtropical coast; Maputo Bay; Delagoa Bay port; flood risk from rivers",
+      "namedPorts": "Port of Maputo (Mozambique primary port; Southern Africa region)",
+      "railRoutes": "CFM (Beira, Maputo, Nacala corridors); Nacala Corridor (to Malawi)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 65,
         "power": 50,
@@ -11529,9 +15796,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 75,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 20
       },
-      "compositeScore": 49
+      "compositeScore": 48
     },
     {
       "country": "Mozambique",
@@ -11548,6 +15816,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical",
+      "terrainType": "Coastal and inland plateau",
+      "elevationRange": "0–1800",
+      "avgTemperature": "25",
+      "annualRainfall": "1000",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Most populous province; Nacala deepwater port potential; cashews",
+      "namedPorts": "Port of Nacala (deepwater; one of best natural harbours East Africa)",
+      "railRoutes": "CFM (Beira, Maputo, Nacala corridors); Nacala Corridor (to Malawi)",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -11564,9 +15844,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 10
       },
-      "compositeScore": 39
+      "compositeScore": 37
     },
     {
       "country": "Mozambique",
@@ -11583,6 +15864,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal and inland",
+      "elevationRange": "0–800",
+      "avgTemperature": "24",
+      "annualRainfall": "1000",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Mozambican coast-to-interior",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "CFM (Beira, Maputo, Nacala corridors); Nacala Corridor (to Malawi)",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11599,9 +15892,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Mozambique",
@@ -11618,6 +15912,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Coastal, Beira port",
+      "elevationRange": "0–200",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Very High",
+      "droughtRisk": "Low",
+      "topographyNotes": "Cyclone Idai 2019 devastated Beira; flat delta; extreme cyclone risk; Beira port",
+      "namedPorts": "Port of Beira (second largest; Central Africa corridor; cyclone-damaged 2019)",
+      "railRoutes": "CFM (Beira, Maputo, Nacala corridors); Nacala Corridor (to Malawi)",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -11634,9 +15940,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 10
       },
-      "compositeScore": 39
+      "compositeScore": 37
     },
     {
       "country": "Mozambique",
@@ -11653,6 +15960,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal and inland",
+      "elevationRange": "0–800",
+      "avgTemperature": "24",
+      "annualRainfall": "1000",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Mozambican coast-to-interior",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "CFM (Beira, Maputo, Nacala corridors); Nacala Corridor (to Malawi)",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11669,9 +15988,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Mozambique",
@@ -11688,6 +16008,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed coastal and inland",
+      "elevationRange": "0–800",
+      "avgTemperature": "24",
+      "annualRainfall": "1000",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Mozambican coast-to-interior",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "CFM (Beira, Maputo, Nacala corridors); Nacala Corridor (to Malawi)",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11704,9 +16036,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 28
     }
   ],
   "Uganda": [
@@ -11725,6 +16058,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "No operational rail; SGR Kampala–Mombasa under planning",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -11741,9 +16086,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 50,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 52
+      "compositeScore": 51
     },
     {
       "country": "Uganda",
@@ -11760,6 +16106,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "No operational rail; SGR Kampala–Mombasa under planning",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -11776,7 +16134,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 42
     },
@@ -11795,6 +16154,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "No operational rail; SGR Kampala–Mombasa under planning",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -11811,7 +16182,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 34
     },
@@ -11830,6 +16202,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "No operational rail; SGR Kampala–Mombasa under planning",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -11846,7 +16230,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 42
     }
@@ -11867,6 +16252,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "High",
+      "climateZone": "Tropical humid",
+      "terrainType": "Coastal lagoon, Ébrié lagoon",
+      "elevationRange": "0–100",
+      "avgTemperature": "26",
+      "annualRainfall": "1700",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Lagoon city; equatorial coast; high humidity; port lagoon system",
+      "namedPorts": "Port of Abidjan (West Africa primary hub; largest WAEMU port)",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 75,
         "power": 65,
@@ -11883,7 +16280,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 75,
         "incentiveReliability": 65,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 63
     },
@@ -11902,6 +16300,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -11918,9 +16328,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 65,
         "tradeCorridor": 75,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 52
+      "compositeScore": 53
     },
     {
       "country": "Ivory Coast",
@@ -11937,6 +16348,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -11953,9 +16376,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     },
     {
       "country": "Ivory Coast",
@@ -11972,6 +16396,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -11988,9 +16424,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     },
     {
       "country": "Ivory Coast",
@@ -12007,6 +16444,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -12023,9 +16472,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     },
     {
       "country": "Ivory Coast",
@@ -12042,6 +16492,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -12058,9 +16520,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     },
     {
       "country": "Ivory Coast",
@@ -12077,6 +16540,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -12093,9 +16568,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     },
     {
       "country": "Ivory Coast",
@@ -12112,6 +16588,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -12128,9 +16616,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     },
     {
       "country": "Ivory Coast",
@@ -12147,6 +16636,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -12163,9 +16664,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     },
     {
       "country": "Ivory Coast",
@@ -12182,6 +16684,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -12198,9 +16712,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     },
     {
       "country": "Ivory Coast",
@@ -12217,6 +16732,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -12233,9 +16760,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     },
     {
       "country": "Ivory Coast",
@@ -12252,6 +16780,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -12268,9 +16808,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     },
     {
       "country": "Ivory Coast",
@@ -12287,6 +16828,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Central plateau",
+      "elevationRange": "200–400",
+      "avgTemperature": "27",
+      "annualRainfall": "1200",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Administrative capital; central plateau; slightly drier than coast",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -12303,9 +16856,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     },
     {
       "country": "Ivory Coast",
@@ -12322,6 +16876,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical sub-humid",
+      "terrainType": "Forest to savanna transition",
+      "elevationRange": "100–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1400",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "Typical Ivorian forest-savanna",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Sitarail Abidjan–Ouagadougou (1,173km; cross-border to Burkina Faso)",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -12338,9 +16904,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 41
+      "compositeScore": 42
     }
   ],
   "Cameroon": [
@@ -12359,6 +16926,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -12375,9 +16954,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Cameroon",
@@ -12394,6 +16974,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -12410,9 +17002,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Cameroon",
@@ -12429,6 +17022,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -12445,9 +17050,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Cameroon",
@@ -12464,6 +17070,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -12480,7 +17098,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 40
       },
       "compositeScore": 29
     },
@@ -12499,6 +17118,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "Port of Douala (Central Africa primary hub; CEMAC gateway)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -12515,7 +17146,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 38
     },
@@ -12534,6 +17166,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -12550,7 +17194,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 40
       },
       "compositeScore": 29
     },
@@ -12569,6 +17214,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -12585,9 +17242,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Cameroon",
@@ -12604,6 +17262,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -12620,9 +17290,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Cameroon",
@@ -12639,6 +17310,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -12655,9 +17338,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Cameroon",
@@ -12674,6 +17358,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -12690,9 +17386,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 34
+      "compositeScore": 35
     }
   ],
   "DR Congo": [
@@ -12711,6 +17408,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -12727,7 +17436,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -12746,6 +17456,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -12762,7 +17484,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -12781,6 +17504,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "High",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -12797,9 +17532,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 20
       },
-      "compositeScore": 34
+      "compositeScore": 33
     },
     {
       "country": "DR Congo",
@@ -12816,6 +17552,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -12832,7 +17580,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -12851,6 +17600,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -12867,7 +17628,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -12886,6 +17648,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -12902,9 +17676,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "DR Congo",
@@ -12921,6 +17696,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -12937,7 +17724,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -12956,6 +17744,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -12972,7 +17772,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -12991,6 +17792,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13007,7 +17820,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13026,6 +17840,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -13042,9 +17868,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 38
+      "compositeScore": 37
     },
     {
       "country": "DR Congo",
@@ -13061,6 +17888,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13077,7 +17916,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13096,6 +17936,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13112,7 +17964,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13131,6 +17984,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13147,7 +18012,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13166,6 +18032,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13182,7 +18060,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13201,6 +18080,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "High",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -13217,9 +18108,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 20
       },
-      "compositeScore": 34
+      "compositeScore": 33
     },
     {
       "country": "DR Congo",
@@ -13236,6 +18128,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13252,7 +18156,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13271,6 +18176,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13287,9 +18204,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "DR Congo",
@@ -13306,6 +18224,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13322,7 +18252,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13341,6 +18272,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13357,9 +18300,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "DR Congo",
@@ -13376,6 +18320,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13392,7 +18348,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13411,6 +18368,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13427,7 +18396,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13446,6 +18416,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13462,9 +18444,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "DR Congo",
@@ -13481,6 +18464,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13497,7 +18492,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13516,6 +18512,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13532,7 +18540,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13551,6 +18560,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13567,7 +18588,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     },
@@ -13586,6 +18608,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "SNCC (3,641km; dilapidated; Lubumbashi–Ilebo; upgrading underway)",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13602,7 +18636,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 27
     }
@@ -13623,6 +18658,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13639,7 +18686,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -13658,6 +18706,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13674,7 +18734,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -13693,6 +18754,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13709,7 +18782,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -13728,6 +18802,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13744,7 +18830,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -13763,6 +18850,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13779,7 +18878,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -13798,6 +18898,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13814,7 +18926,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -13833,6 +18946,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -13849,9 +18974,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 10
       },
-      "compositeScore": 36
+      "compositeScore": 34
     },
     {
       "country": "Sudan",
@@ -13868,6 +18994,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13884,7 +19022,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -13903,6 +19042,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13919,7 +19070,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -13938,6 +19090,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13954,7 +19118,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -13973,6 +19138,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "Port Sudan (Sudan primary port; Red Sea); Suakin",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -13989,7 +19166,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 29
     },
@@ -14008,6 +19186,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -14024,7 +19214,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -14043,6 +19234,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -14059,7 +19262,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -14078,6 +19282,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -14094,7 +19310,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -14113,6 +19330,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -14129,7 +19358,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -14148,6 +19378,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -14164,7 +19406,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -14183,6 +19426,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -14199,7 +19454,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     },
@@ -14218,6 +19474,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -14234,7 +19502,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 28
     }
@@ -14255,6 +19524,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14271,9 +19552,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     },
     {
       "country": "Botswana",
@@ -14290,6 +19572,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14306,9 +19600,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     },
     {
       "country": "Botswana",
@@ -14325,6 +19620,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -14341,9 +19648,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 53
+      "compositeScore": 57
     },
     {
       "country": "Botswana",
@@ -14360,6 +19668,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 65,
         "power": 65,
@@ -14376,9 +19696,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 65,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 90
       },
-      "compositeScore": 61
+      "compositeScore": 63
     },
     {
       "country": "Botswana",
@@ -14395,6 +19716,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14411,9 +19744,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     },
     {
       "country": "Botswana",
@@ -14430,6 +19764,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14446,9 +19792,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     },
     {
       "country": "Botswana",
@@ -14465,6 +19812,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14481,9 +19840,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     },
     {
       "country": "Botswana",
@@ -14500,6 +19860,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14516,9 +19888,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     },
     {
       "country": "Botswana",
@@ -14535,6 +19908,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14551,9 +19936,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     },
     {
       "country": "Botswana",
@@ -14570,6 +19956,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14586,9 +19984,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     },
     {
       "country": "Botswana",
@@ -14605,6 +20004,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14621,9 +20032,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     },
     {
       "country": "Botswana",
@@ -14640,6 +20052,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14656,9 +20080,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     },
     {
       "country": "Botswana",
@@ -14675,6 +20100,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14691,9 +20128,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     },
     {
       "country": "Botswana",
@@ -14710,6 +20148,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Semi-arid",
+      "terrainType": "Kalahari savanna",
+      "elevationRange": "900–1100",
+      "avgTemperature": "22",
+      "annualRainfall": "400",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Botswana Kalahari",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Botswana Railways (971km; Lobatse–Ramokgwebana; connects SA to Zimbabwe)",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14726,9 +20176,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 54
     }
   ],
   "Namibia": [
@@ -14747,6 +20198,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Medium–High",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and savanna",
+      "elevationRange": "0–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Namibian arid landscape",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 75,
         "power": 50,
@@ -14763,9 +20226,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 75,
         "tradeCorridor": 85,
         "incentiveReliability": 65,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 60
+      "compositeScore": 61
     },
     {
       "country": "Namibia",
@@ -14782,6 +20246,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and savanna",
+      "elevationRange": "0–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Namibian arid landscape",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14798,9 +20274,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -14817,6 +20294,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid",
+      "terrainType": "Southern desert, Fish River Canyon",
+      "elevationRange": "500–2200",
+      "avgTemperature": "20",
+      "annualRainfall": "100",
+      "floodRisk": "Very Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Fish River Canyon (2nd largest canyon in world); extremely arid; Lüderitz coast",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14833,9 +20322,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -14852,6 +20342,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical",
+      "terrainType": "Okavango river, woodland",
+      "elevationRange": "900–1100",
+      "avgTemperature": "24",
+      "annualRainfall": "700",
+      "floodRisk": "High",
+      "droughtRisk": "Low",
+      "topographyNotes": "Okavango River; miombo woodland; high biodiversity; seasonal flooding",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14868,9 +20370,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -14887,6 +20390,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and savanna",
+      "elevationRange": "0–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Namibian arid landscape",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14903,9 +20418,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -14922,6 +20438,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid",
+      "terrainType": "Central plateau, Windhoek",
+      "elevationRange": "1600–1800",
+      "avgTemperature": "19",
+      "annualRainfall": "350",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Windhoek on plateau; mild climate; semi-arid; Namibia Desert fringe",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14938,9 +20466,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -14957,6 +20486,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and savanna",
+      "elevationRange": "0–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Namibian arid landscape",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -14973,9 +20514,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -14992,6 +20534,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and savanna",
+      "elevationRange": "0–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Namibian arid landscape",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -15008,9 +20562,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -15027,6 +20582,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and savanna",
+      "elevationRange": "0–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Namibian arid landscape",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -15043,9 +20610,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -15062,6 +20630,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and savanna",
+      "elevationRange": "0–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Namibian arid landscape",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -15078,9 +20658,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -15097,6 +20678,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Semi-arid",
+      "terrainType": "Flat Cuvelai basin, oshanas",
+      "elevationRange": "1070–1100",
+      "avgTemperature": "23",
+      "annualRainfall": "450",
+      "floodRisk": "High",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Flat floodplain; Cuvelai Delta floods seasonally; densely populated north",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -15113,9 +20706,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -15132,6 +20726,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and savanna",
+      "elevationRange": "0–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Namibian arid landscape",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -15148,9 +20754,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -15167,6 +20774,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and savanna",
+      "elevationRange": "0–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Namibian arid landscape",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -15183,9 +20802,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     },
     {
       "country": "Namibia",
@@ -15202,6 +20822,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and savanna",
+      "elevationRange": "0–1500",
+      "avgTemperature": "20",
+      "annualRainfall": "250",
+      "floodRisk": "Low",
+      "droughtRisk": "High",
+      "topographyNotes": "Typical Namibian arid landscape",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "TransNamib (2,382km; Walvis Bay to Zimbabwe; Trans-Kalahari Corridor rail planned)",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": -1,
@@ -15218,9 +20850,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 38,
         "incentiveReliability": 38,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 80
       },
-      "compositeScore": 44
+      "compositeScore": 47
     }
   ],
   "Mali": [
@@ -15239,6 +20872,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low–Medium",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 38,
@@ -15255,9 +20900,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 43
+      "compositeScore": 42
     },
     {
       "country": "Mali",
@@ -15274,6 +20920,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15290,9 +20948,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Mali",
@@ -15309,6 +20968,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15325,9 +20996,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 10
       },
-      "compositeScore": 27
+      "compositeScore": 26
     },
     {
       "country": "Mali",
@@ -15344,6 +21016,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15360,9 +21044,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Mali",
@@ -15379,6 +21064,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15395,9 +21092,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 10
       },
-      "compositeScore": 27
+      "compositeScore": 26
     },
     {
       "country": "Mali",
@@ -15414,6 +21112,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15430,9 +21140,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Mali",
@@ -15449,6 +21160,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15465,9 +21188,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 10
       },
-      "compositeScore": 27
+      "compositeScore": 26
     },
     {
       "country": "Mali",
@@ -15484,6 +21208,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -15500,9 +21236,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 10
       },
-      "compositeScore": 36
+      "compositeScore": 34
     },
     {
       "country": "Mali",
@@ -15519,6 +21256,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15535,9 +21284,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 10
       },
-      "compositeScore": 27
+      "compositeScore": 26
     },
     {
       "country": "Mali",
@@ -15554,6 +21304,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15570,9 +21332,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     }
   ],
   "Libya": [
@@ -15591,6 +21354,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15607,9 +21382,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 24
+      "compositeScore": 26
     },
     {
       "country": "Libya",
@@ -15626,6 +21402,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15642,9 +21430,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 24
+      "compositeScore": 26
     },
     {
       "country": "Libya",
@@ -15661,6 +21450,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15677,9 +21478,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 24
+      "compositeScore": 26
     },
     {
       "country": "Libya",
@@ -15696,6 +21498,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15712,9 +21526,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 24
+      "compositeScore": 26
     },
     {
       "country": "Libya",
@@ -15731,6 +21546,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15747,9 +21574,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 24
+      "compositeScore": 26
     },
     {
       "country": "Libya",
@@ -15766,6 +21594,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -15782,9 +21622,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 60
       },
-      "compositeScore": 24
+      "compositeScore": 26
     },
     {
       "country": "Libya",
@@ -15801,6 +21642,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -15817,9 +21670,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -15836,6 +21690,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -15852,9 +21718,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -15871,6 +21738,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -15887,9 +21766,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -15906,6 +21786,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -15922,9 +21814,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -15941,6 +21834,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -15957,9 +21862,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -15976,6 +21882,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -15992,9 +21910,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 31
     },
     {
       "country": "Libya",
@@ -16011,6 +21930,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -16027,9 +21958,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -16046,6 +21978,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -16062,9 +22006,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -16081,6 +22026,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -16097,9 +22054,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -16116,6 +22074,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -16132,9 +22102,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -16151,6 +22122,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -16167,9 +22150,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -16186,6 +22170,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -16202,9 +22198,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -16221,6 +22218,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -16237,9 +22246,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -16256,6 +22266,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "Port of Tripoli; Misrata Port",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -16272,9 +22294,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 50
       },
-      "compositeScore": 28
+      "compositeScore": 33
     },
     {
       "country": "Libya",
@@ -16291,6 +22314,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -16307,9 +22342,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     },
     {
       "country": "Libya",
@@ -16326,6 +22362,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -16342,9 +22390,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 28
+      "compositeScore": 35
     }
   ],
   "Niger": [
@@ -16363,6 +22412,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": -1,
         "power": 25,
@@ -16379,9 +22440,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 26
+      "compositeScore": 24
     },
     {
       "country": "Niger",
@@ -16398,6 +22460,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": -1,
         "power": 25,
@@ -16414,9 +22488,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 26
+      "compositeScore": 24
     },
     {
       "country": "Niger",
@@ -16433,6 +22508,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": -1,
         "power": 25,
@@ -16449,7 +22536,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 26
     },
@@ -16468,6 +22556,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": -1,
         "power": 25,
@@ -16484,7 +22584,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 26
     },
@@ -16503,6 +22604,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": 38,
@@ -16519,7 +22632,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": 38
+        "waterAvailability": 38,
+        "crime": 30
       },
       "compositeScore": 39
     },
@@ -16538,6 +22652,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": -1,
         "power": 25,
@@ -16554,7 +22680,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 26
     },
@@ -16573,6 +22700,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": -1,
         "power": 25,
@@ -16589,7 +22728,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 26
     },
@@ -16608,6 +22748,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Very Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": -1,
         "power": 25,
@@ -16624,7 +22776,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
       "compositeScore": 26
     }
@@ -16645,6 +22798,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -16661,7 +22826,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -16680,6 +22846,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -16696,7 +22874,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -16715,6 +22894,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "Port of Lomé (deepwater; growing West Africa hub; trans-shipment)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -16731,7 +22922,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
       "compositeScore": 42
     },
@@ -16750,6 +22942,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -16766,7 +22970,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
       "compositeScore": 40
     },
@@ -16785,6 +22990,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -16801,7 +23018,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
       "compositeScore": 40
     }
@@ -16822,6 +23040,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -16838,9 +23068,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 20
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Burkina Faso",
@@ -16857,6 +23088,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -16873,9 +23116,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 20
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Burkina Faso",
@@ -16892,6 +23136,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -16908,7 +23164,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 29
     },
@@ -16927,6 +23184,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -16943,9 +23212,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 20
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Burkina Faso",
@@ -16962,6 +23232,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -16978,9 +23260,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 20
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Burkina Faso",
@@ -16997,6 +23280,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17013,9 +23308,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 20
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Burkina Faso",
@@ -17032,6 +23328,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17048,9 +23356,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 20
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Burkina Faso",
@@ -17067,6 +23376,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17083,9 +23404,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 29
+      "compositeScore": 27
     },
     {
       "country": "Burkina Faso",
@@ -17102,6 +23424,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17118,9 +23452,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 20
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Burkina Faso",
@@ -17137,6 +23472,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17153,9 +23500,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 29
+      "compositeScore": 27
     },
     {
       "country": "Burkina Faso",
@@ -17172,6 +23520,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17188,9 +23548,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 20
       },
-      "compositeScore": 29
+      "compositeScore": 28
     },
     {
       "country": "Burkina Faso",
@@ -17207,6 +23568,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17223,9 +23596,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 29
+      "compositeScore": 27
     },
     {
       "country": "Burkina Faso",
@@ -17242,6 +23616,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17258,9 +23644,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 20
       },
-      "compositeScore": 29
+      "compositeScore": 28
     }
   ],
   "Benin": [
@@ -17279,6 +23666,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17295,7 +23694,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 40
     },
@@ -17314,6 +23714,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17330,7 +23742,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 40
     },
@@ -17349,6 +23762,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17365,7 +23790,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 40
     },
@@ -17384,6 +23810,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17400,7 +23838,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 40
     },
@@ -17419,6 +23858,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17435,7 +23886,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 40
     },
@@ -17454,6 +23906,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17470,7 +23934,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 40
     },
@@ -17489,6 +23954,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17505,7 +23982,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 40
     },
@@ -17524,6 +24002,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "Port of Cotonou (Benin gateway; Sahel transit)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17540,9 +24030,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 42
+      "compositeScore": 41
     },
     {
       "country": "Benin",
@@ -17559,6 +24050,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17575,7 +24078,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 40
     },
@@ -17594,6 +24098,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17610,7 +24126,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 40
     },
@@ -17629,6 +24146,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17645,7 +24174,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 40
     },
@@ -17664,6 +24194,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -17680,7 +24222,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 38,
         "tradeCorridor": 50,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
       "compositeScore": 40
     }
@@ -17701,6 +24244,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17717,9 +24272,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -17736,6 +24292,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17752,9 +24320,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -17771,6 +24340,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17787,9 +24368,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -17806,6 +24388,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17822,9 +24416,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -17841,6 +24436,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17857,9 +24464,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -17876,6 +24484,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17892,9 +24512,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -17911,6 +24532,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17927,9 +24560,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -17946,6 +24580,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17962,9 +24608,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -17981,6 +24628,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -17997,9 +24656,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18016,6 +24676,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18032,9 +24704,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18051,6 +24724,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18067,9 +24752,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18086,6 +24772,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18102,9 +24800,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18121,6 +24820,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18137,9 +24848,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18156,6 +24868,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18172,9 +24896,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18191,6 +24916,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18207,9 +24944,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18226,6 +24964,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18242,9 +24992,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18261,6 +25012,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -18277,9 +25040,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 32
+      "compositeScore": 29
     },
     {
       "country": "Chad",
@@ -18296,6 +25060,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18312,9 +25088,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18331,6 +25108,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18347,9 +25136,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18366,6 +25156,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18382,9 +25184,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18401,6 +25204,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18417,9 +25232,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18436,6 +25252,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18452,9 +25280,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     },
     {
       "country": "Chad",
@@ -18471,6 +25300,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -18487,9 +25328,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": -1,
         "incentiveReliability": 25,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 0
       },
-      "compositeScore": 25
+      "compositeScore": 23
     }
   ],
   "Mauritania": [
@@ -18508,6 +25350,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18524,9 +25378,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18543,6 +25398,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18559,9 +25426,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18578,6 +25446,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18594,9 +25474,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18613,6 +25494,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18629,9 +25522,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18648,6 +25542,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18664,9 +25570,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18683,6 +25590,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18699,9 +25618,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18718,6 +25638,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18734,9 +25666,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18753,6 +25686,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18769,9 +25714,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18788,6 +25734,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18804,9 +25762,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18823,6 +25782,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18839,9 +25810,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18858,6 +25830,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18874,9 +25858,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18893,6 +25878,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18909,9 +25906,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18928,6 +25926,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18944,9 +25954,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18963,6 +25974,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -18979,9 +26002,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Mauritania",
@@ -18998,6 +26022,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19014,9 +26050,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 30
       },
-      "compositeScore": 28
+      "compositeScore": 29
     }
   ],
   "South Sudan": [
@@ -19035,6 +26072,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19051,9 +26100,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 20
       },
-      "compositeScore": 29
+      "compositeScore": 27
     },
     {
       "country": "South Sudan",
@@ -19070,6 +26120,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19086,9 +26148,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 24
     },
     {
       "country": "South Sudan",
@@ -19105,6 +26168,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19121,9 +26196,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 24
     },
     {
       "country": "South Sudan",
@@ -19140,6 +26216,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19156,9 +26244,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 24
     },
     {
       "country": "South Sudan",
@@ -19175,6 +26264,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19191,9 +26292,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 24
     },
     {
       "country": "South Sudan",
@@ -19210,6 +26312,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19226,9 +26340,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 24
     },
     {
       "country": "South Sudan",
@@ -19245,6 +26360,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19261,9 +26388,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 24
     },
     {
       "country": "South Sudan",
@@ -19280,6 +26408,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19296,9 +26436,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 24
     },
     {
       "country": "South Sudan",
@@ -19315,6 +26456,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19331,9 +26484,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 24
     },
     {
       "country": "South Sudan",
@@ -19350,6 +26504,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 9,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19366,9 +26532,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 10
       },
-      "compositeScore": 29
+      "compositeScore": 24
     }
   ],
   "Malawi": [
@@ -19387,6 +26554,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19403,9 +26582,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19422,6 +26602,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19438,9 +26630,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19457,6 +26650,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19473,9 +26678,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19492,6 +26698,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19508,9 +26726,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19527,6 +26746,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19543,9 +26774,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19562,6 +26794,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19578,9 +26822,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19597,6 +26842,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19613,9 +26870,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19632,6 +26890,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19648,9 +26918,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19667,6 +26938,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19683,9 +26966,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19702,6 +26986,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19718,9 +27014,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19737,6 +27034,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19753,9 +27062,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19772,6 +27082,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19788,9 +27110,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19807,6 +27130,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19823,9 +27158,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19842,6 +27178,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19858,9 +27206,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19877,6 +27226,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19893,9 +27254,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19912,6 +27274,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19928,9 +27302,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19947,6 +27322,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19963,9 +27350,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -19982,6 +27370,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -19998,9 +27398,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -20017,6 +27418,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20033,9 +27446,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -20052,6 +27466,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20068,9 +27494,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -20087,6 +27514,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20103,9 +27542,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -20122,6 +27562,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20138,9 +27590,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -20157,6 +27610,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20173,9 +27638,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -20192,6 +27658,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20208,9 +27686,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -20227,6 +27706,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20243,9 +27734,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -20262,6 +27754,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20278,9 +27782,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -20297,6 +27802,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20313,9 +27830,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     },
     {
       "country": "Malawi",
@@ -20332,6 +27850,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20348,9 +27878,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 37
     }
   ],
   "Madagascar": [
@@ -20369,6 +27900,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20385,9 +27928,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20404,6 +27948,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20420,9 +27976,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20439,6 +27996,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20455,9 +28024,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20474,6 +28044,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20490,9 +28072,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20509,6 +28092,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20525,9 +28120,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20544,6 +28140,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20560,9 +28168,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20579,6 +28188,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20595,9 +28216,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20614,6 +28236,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20630,9 +28264,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20649,6 +28284,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20665,9 +28312,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20684,6 +28332,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20700,9 +28360,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20719,6 +28380,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20735,9 +28408,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20754,6 +28428,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20770,9 +28456,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20789,6 +28476,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20805,9 +28504,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20824,6 +28524,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20840,9 +28552,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20859,6 +28572,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20875,9 +28600,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20894,6 +28620,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20910,9 +28648,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20929,6 +28668,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20945,9 +28696,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20964,6 +28716,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -20980,9 +28744,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -20999,6 +28764,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -21015,9 +28792,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -21034,6 +28812,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -21050,9 +28840,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -21069,6 +28860,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -21085,9 +28888,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Madagascar",
@@ -21104,6 +28908,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Information unavailable",
       "exportOrientation": "Information unavailable",
       "multinationalPresence": "Information unavailable",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": -1,
         "power": -1,
@@ -21120,9 +28936,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": -1,
         "tradeCorridor": -1,
         "incentiveReliability": 38,
-        "waterAvailability": -1
+        "waterAvailability": -1,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     }
   ],
   "Burundi": [
@@ -21141,6 +28958,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21157,9 +28986,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21176,6 +29006,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -21192,9 +29034,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 29
+      "compositeScore": 30
     },
     {
       "country": "Burundi",
@@ -21211,6 +29054,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21227,9 +29082,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21246,6 +29102,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21262,9 +29130,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21281,6 +29150,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21297,9 +29178,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21316,6 +29198,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21332,9 +29226,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21351,6 +29246,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21367,9 +29274,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21386,6 +29294,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21402,9 +29322,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21421,6 +29342,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21437,9 +29370,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21456,6 +29390,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21472,9 +29418,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21491,6 +29438,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21507,9 +29466,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21526,6 +29486,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21542,9 +29514,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21561,6 +29534,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21577,9 +29562,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21596,6 +29582,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21612,9 +29610,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21631,6 +29630,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21647,9 +29658,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21666,6 +29678,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21682,9 +29706,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21701,6 +29726,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21717,9 +29754,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Burundi",
@@ -21736,6 +29774,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21752,9 +29802,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     }
   ],
   "Cabo Verde": [
@@ -21773,6 +29824,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -21789,7 +29852,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 49
     },
@@ -21808,6 +29872,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -21824,7 +29900,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -21843,6 +29920,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -21859,7 +29948,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 46
     },
@@ -21878,6 +29968,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -21894,7 +29996,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -21913,6 +30016,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -21929,7 +30044,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -21948,6 +30064,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -21964,7 +30092,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -21983,6 +30112,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "Port of Praia; Porto Grande (Mindelo, São Vicente) — Atlantic hub potential",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -21999,7 +30140,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 51
     },
@@ -22018,6 +30160,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22034,7 +30188,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22053,6 +30208,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22069,7 +30236,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22088,6 +30256,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22104,7 +30284,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22123,6 +30304,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -22139,9 +30332,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 50
+      "compositeScore": 51
     },
     {
       "country": "Cabo Verde",
@@ -22158,6 +30352,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22174,7 +30380,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22193,6 +30400,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22209,7 +30428,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22228,6 +30448,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22244,7 +30476,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22263,6 +30496,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22279,7 +30524,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22298,6 +30544,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22314,7 +30572,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22333,6 +30592,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22349,7 +30620,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22368,6 +30640,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22384,7 +30668,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22403,6 +30688,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22419,7 +30716,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22438,6 +30736,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "Porto Grande Mindelo (strategic Atlantic mid-point; ship repair)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -22454,7 +30764,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 51
     },
@@ -22473,6 +30784,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22489,7 +30812,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     },
@@ -22508,6 +30832,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low–Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -22524,7 +30860,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
       "compositeScore": 48
     }
@@ -22545,6 +30882,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22561,7 +30910,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -22580,6 +30930,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22596,9 +30958,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 27
+      "compositeScore": 28
     },
     {
       "country": "Central African Republic",
@@ -22615,6 +30978,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22631,7 +31006,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -22650,6 +31026,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22666,7 +31054,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -22685,6 +31074,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22701,7 +31102,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -22720,6 +31122,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22736,7 +31150,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -22755,6 +31170,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22771,7 +31198,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -22790,6 +31218,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22806,7 +31246,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -22825,6 +31266,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22841,7 +31294,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -22860,6 +31314,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22876,7 +31342,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -22895,6 +31362,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22911,7 +31390,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -22930,6 +31410,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22946,7 +31438,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -22965,6 +31458,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -22981,7 +31486,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -23000,6 +31506,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23016,7 +31534,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -23035,6 +31554,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23051,7 +31582,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -23070,6 +31602,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23086,7 +31630,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     },
@@ -23105,6 +31650,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23121,7 +31678,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 27
     }
@@ -23142,6 +31700,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "Port of Moroni (small island port)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23158,7 +31728,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 31
     },
@@ -23177,6 +31748,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23193,7 +31776,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 31
     },
@@ -23212,6 +31796,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23228,7 +31824,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 33
     }
@@ -23249,6 +31846,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis–Djibouti Railway (standard gauge; Djibouti terminus)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23265,7 +31874,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 31
     },
@@ -23284,6 +31894,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis–Djibouti Railway (standard gauge; Djibouti terminus)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23300,9 +31922,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
-      "compositeScore": 33
+      "compositeScore": 32
     },
     {
       "country": "Djibouti",
@@ -23319,6 +31942,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis–Djibouti Railway (standard gauge; Djibouti terminus)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23335,7 +31970,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 31
     },
@@ -23354,6 +31990,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "Port of Djibouti (Doraleh); DCT container terminal; China Merchants; Ethiopia transit 90%; Bab-el-Mandeb Strait (12km from Yemen — critical chokepoint)",
+      "railRoutes": "Addis–Djibouti Railway (standard gauge; Djibouti terminus)",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 65,
         "power": 50,
@@ -23370,7 +32018,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 44
     },
@@ -23389,6 +32038,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis–Djibouti Railway (standard gauge; Djibouti terminus)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23405,7 +32066,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 30
     },
@@ -23424,6 +32086,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Addis–Djibouti Railway (standard gauge; Djibouti terminus)",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23440,7 +32114,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 32
     }
@@ -23461,6 +32136,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23477,9 +32164,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Equatorial Guinea",
@@ -23496,6 +32184,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -23512,9 +32212,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 36
+      "compositeScore": 37
     },
     {
       "country": "Equatorial Guinea",
@@ -23531,6 +32232,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23547,9 +32260,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Equatorial Guinea",
@@ -23566,6 +32280,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23582,9 +32308,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Equatorial Guinea",
@@ -23601,6 +32328,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23617,9 +32356,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Equatorial Guinea",
@@ -23636,6 +32376,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23652,9 +32404,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Equatorial Guinea",
@@ -23671,6 +32424,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -23687,9 +32452,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Equatorial Guinea",
@@ -23706,6 +32472,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23722,9 +32500,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 33
+      "compositeScore": 34
     }
   ],
   "Eritrea": [
@@ -23743,6 +32522,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23759,7 +32550,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 28
     },
@@ -23778,6 +32570,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23794,7 +32598,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 28
     },
@@ -23813,6 +32618,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "Port of Assab (Red Sea; near Bab-el-Mandeb; strategic location)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23829,7 +32646,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 28
     },
@@ -23848,6 +32666,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23864,7 +32694,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 28
     },
@@ -23883,6 +32714,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23899,9 +32742,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
-      "compositeScore": 28
+      "compositeScore": 29
     },
     {
       "country": "Eritrea",
@@ -23918,6 +32762,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "Port of Massawa (Red Sea; underutilised since Tigray conflict)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -23934,7 +32790,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 40
       },
       "compositeScore": 28
     }
@@ -23955,6 +32812,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -23971,9 +32840,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 41
+      "compositeScore": 40
     },
     {
       "country": "Eswatini",
@@ -23990,6 +32860,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24006,9 +32888,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 33
+      "compositeScore": 32
     },
     {
       "country": "Eswatini",
@@ -24025,6 +32908,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -24041,9 +32936,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 40
+      "compositeScore": 39
     },
     {
       "country": "Eswatini",
@@ -24060,6 +32956,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24076,9 +32984,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 33
+      "compositeScore": 32
     }
   ],
   "Gabon": [
@@ -24097,6 +33006,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "Port of Libreville; Port-Gentil (oil terminal)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -24113,9 +33034,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 44
+      "compositeScore": 45
     },
     {
       "country": "Gabon",
@@ -24132,6 +33054,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -24148,9 +33082,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 35
+      "compositeScore": 36
     },
     {
       "country": "Gabon",
@@ -24167,6 +33102,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24183,9 +33130,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Gabon",
@@ -24202,6 +33150,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24218,9 +33178,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Gabon",
@@ -24237,6 +33198,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24253,9 +33226,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Gabon",
@@ -24272,6 +33246,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24288,9 +33274,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Gabon",
@@ -24307,6 +33294,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24323,9 +33322,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Gabon",
@@ -24342,6 +33342,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "Port-Gentil (oil terminal; manganese loading)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -24358,9 +33370,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 35
+      "compositeScore": 36
     },
     {
       "country": "Gabon",
@@ -24377,6 +33390,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24393,9 +33418,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 34
+      "compositeScore": 35
     }
   ],
   "Gambia": [
@@ -24414,6 +33440,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -24430,9 +33468,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 43
+      "compositeScore": 44
     },
     {
       "country": "Gambia",
@@ -24449,6 +33488,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24465,9 +33516,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 35
+      "compositeScore": 37
     },
     {
       "country": "Gambia",
@@ -24484,6 +33536,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24500,9 +33564,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 35
+      "compositeScore": 37
     },
     {
       "country": "Gambia",
@@ -24519,6 +33584,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24535,9 +33612,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 35
+      "compositeScore": 37
     },
     {
       "country": "Gambia",
@@ -24554,6 +33632,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24570,9 +33660,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 35
+      "compositeScore": 37
     },
     {
       "country": "Gambia",
@@ -24589,6 +33680,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -24605,9 +33708,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 36
+      "compositeScore": 37
     }
   ],
   "Guinea": [
@@ -24626,6 +33730,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24642,9 +33758,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Guinea",
@@ -24661,6 +33778,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "Port of Conakry (Guinea primary; bauxite/alumina loading)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24677,9 +33806,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 32
     },
     {
       "country": "Guinea",
@@ -24696,6 +33826,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24712,9 +33854,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Guinea",
@@ -24731,6 +33874,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24747,9 +33902,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Guinea",
@@ -24766,6 +33922,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24782,9 +33950,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Guinea",
@@ -24801,6 +33970,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24817,9 +33998,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Guinea",
@@ -24836,6 +34018,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24852,9 +34046,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Guinea",
@@ -24871,6 +34066,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24887,9 +34094,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     }
   ],
   "Guinea-Bissau": [
@@ -24908,6 +34116,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24924,7 +34144,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 29
     },
@@ -24943,6 +34164,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24959,7 +34192,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 29
     },
@@ -24978,6 +34212,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -24994,7 +34240,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 29
     },
@@ -25013,6 +34260,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25029,7 +34288,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 31
     },
@@ -25048,6 +34308,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25064,7 +34336,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 31
     },
@@ -25083,6 +34356,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25099,7 +34384,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 29
     },
@@ -25118,6 +34404,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25134,7 +34432,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 29
     },
@@ -25153,6 +34452,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25169,7 +34480,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 31
     },
@@ -25188,6 +34500,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical savanna",
+      "terrainType": "Mixed savanna and woodland",
+      "elevationRange": "200–1200",
+      "avgTemperature": "25",
+      "annualRainfall": "900",
+      "floodRisk": "Low",
+      "droughtRisk": "Medium",
+      "topographyNotes": "Sub-Saharan savanna zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25204,7 +34528,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
       "compositeScore": 31
     }
@@ -25225,6 +34550,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25241,9 +34578,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 30
+      "compositeScore": 32
     },
     {
       "country": "Lesotho",
@@ -25260,6 +34598,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25276,9 +34626,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Lesotho",
@@ -25295,6 +34646,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25311,9 +34674,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 31
+      "compositeScore": 33
     },
     {
       "country": "Lesotho",
@@ -25330,6 +34694,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25346,9 +34722,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Lesotho",
@@ -25365,6 +34742,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -25381,9 +34770,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 39
+      "compositeScore": 41
     },
     {
       "country": "Lesotho",
@@ -25400,6 +34790,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25416,9 +34818,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Lesotho",
@@ -25435,6 +34838,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25451,9 +34866,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Lesotho",
@@ -25470,6 +34886,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25486,9 +34914,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Lesotho",
@@ -25505,6 +34934,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25521,9 +34962,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Lesotho",
@@ -25540,6 +34982,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Temperate highland",
+      "terrainType": "High plateau and mountains",
+      "elevationRange": "1500–3000",
+      "avgTemperature": "17",
+      "annualRainfall": "1000",
+      "floodRisk": "Low",
+      "droughtRisk": "Low",
+      "topographyNotes": "East/Central African highlands",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25556,9 +35010,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 25,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 32
+      "compositeScore": 33
     }
   ],
   "Liberia": [
@@ -25577,6 +35032,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25593,9 +35060,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Liberia",
@@ -25612,6 +35080,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25628,9 +35108,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Liberia",
@@ -25647,6 +35128,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25663,9 +35156,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Liberia",
@@ -25682,6 +35176,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "Port of Buchanan (iron ore loading)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25698,9 +35204,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 31
+      "compositeScore": 33
     },
     {
       "country": "Liberia",
@@ -25717,6 +35224,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25733,9 +35252,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 31
+      "compositeScore": 33
     },
     {
       "country": "Liberia",
@@ -25752,6 +35272,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25768,9 +35300,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 30
+      "compositeScore": 31
     },
     {
       "country": "Liberia",
@@ -25787,6 +35320,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25803,9 +35348,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Liberia",
@@ -25822,6 +35368,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25838,9 +35396,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Liberia",
@@ -25857,6 +35416,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25873,9 +35444,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Liberia",
@@ -25892,6 +35464,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25908,9 +35492,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 31
+      "compositeScore": 33
     },
     {
       "country": "Liberia",
@@ -25927,6 +35512,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "Port of Monrovia (Freeport of Monrovia)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25943,9 +35540,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Liberia",
@@ -25962,6 +35560,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -25978,9 +35588,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Liberia",
@@ -25997,6 +35608,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26013,9 +35636,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Liberia",
@@ -26032,6 +35656,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26048,9 +35684,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 34
+      "compositeScore": 35
     },
     {
       "country": "Liberia",
@@ -26067,6 +35704,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 5,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26083,9 +35732,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 50
       },
-      "compositeScore": 33
+      "compositeScore": 34
     }
   ],
   "Mauritius": [
@@ -26104,6 +35754,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Low",
       "multinationalPresence": "High",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26120,9 +35782,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 80
       },
-      "compositeScore": 46
+      "compositeScore": 48
     },
     {
       "country": "Mauritius",
@@ -26139,6 +35802,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Medium",
       "multinationalPresence": "High",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -26155,9 +35830,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 80
       },
-      "compositeScore": 51
+      "compositeScore": 53
     },
     {
       "country": "Mauritius",
@@ -26174,6 +35850,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Medium",
       "multinationalPresence": "High",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -26190,9 +35878,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 80
       },
-      "compositeScore": 51
+      "compositeScore": 53
     },
     {
       "country": "Mauritius",
@@ -26209,6 +35898,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Medium",
       "multinationalPresence": "High",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -26225,9 +35926,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 80
       },
-      "compositeScore": 51
+      "compositeScore": 53
     },
     {
       "country": "Mauritius",
@@ -26244,6 +35946,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Medium",
       "multinationalPresence": "High",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -26260,9 +35974,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 80
       },
-      "compositeScore": 51
+      "compositeScore": 53
     },
     {
       "country": "Mauritius",
@@ -26279,6 +35994,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Medium",
       "multinationalPresence": "High",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -26295,9 +36022,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 80
       },
-      "compositeScore": 52
+      "compositeScore": 54
     },
     {
       "country": "Mauritius",
@@ -26314,6 +36042,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Medium",
       "multinationalPresence": "High",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 75,
         "power": 50,
@@ -26330,9 +36070,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 80
       },
-      "compositeScore": 54
+      "compositeScore": 56
     },
     {
       "country": "Mauritius",
@@ -26349,6 +36090,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Medium",
       "multinationalPresence": "High",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "Port Louis (IFC; freeport; Indian Ocean hub; transshipment)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 75,
         "power": 65,
@@ -26365,9 +36118,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 80
       },
-      "compositeScore": 57
+      "compositeScore": 58
     },
     {
       "country": "Mauritius",
@@ -26384,6 +36138,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Medium",
       "multinationalPresence": "High",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -26400,9 +36166,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 80
       },
-      "compositeScore": 53
+      "compositeScore": 54
     },
     {
       "country": "Mauritius",
@@ -26419,6 +36186,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Medium",
       "multinationalPresence": "High",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26435,9 +36214,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 80
       },
-      "compositeScore": 47
+      "compositeScore": 49
     },
     {
       "country": "Mauritius",
@@ -26454,6 +36234,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium–High",
       "exportOrientation": "Medium",
       "multinationalPresence": "High",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 2,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": 50,
@@ -26470,9 +36262,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 80
       },
-      "compositeScore": 50
+      "compositeScore": 51
     }
   ],
   "Republic of Congo": [
@@ -26491,6 +36284,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26507,9 +36312,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 31
+      "compositeScore": 33
     },
     {
       "country": "Republic of Congo",
@@ -26526,6 +36332,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -26542,9 +36360,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 33
+      "compositeScore": 35
     },
     {
       "country": "Republic of Congo",
@@ -26561,6 +36380,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26577,9 +36408,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Republic of Congo",
@@ -26596,6 +36428,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26612,9 +36456,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Republic of Congo",
@@ -26631,6 +36476,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26647,9 +36504,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 31
+      "compositeScore": 32
     },
     {
       "country": "Republic of Congo",
@@ -26666,6 +36524,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26682,9 +36552,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Republic of Congo",
@@ -26701,6 +36572,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26717,9 +36600,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Republic of Congo",
@@ -26736,6 +36620,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26752,9 +36648,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 31
+      "compositeScore": 33
     },
     {
       "country": "Republic of Congo",
@@ -26771,6 +36668,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26787,9 +36696,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Republic of Congo",
@@ -26806,6 +36716,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -26822,9 +36744,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 33
+      "compositeScore": 34
     },
     {
       "country": "Republic of Congo",
@@ -26841,6 +36764,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26857,9 +36792,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 29
+      "compositeScore": 31
     },
     {
       "country": "Republic of Congo",
@@ -26876,6 +36812,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 4,
+      "crimeLevel": "Low–Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -26892,9 +36840,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 60
       },
-      "compositeScore": 33
+      "compositeScore": 34
     }
   ],
   "Seychelles": [
@@ -26913,6 +36862,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -26929,9 +36890,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -26948,6 +36910,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -26964,9 +36938,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -26983,6 +36958,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -26999,9 +36986,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27018,6 +37006,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27034,9 +37034,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27053,6 +37054,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27069,9 +37082,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27088,6 +37102,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27104,9 +37130,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 49
+      "compositeScore": 52
     },
     {
       "country": "Seychelles",
@@ -27123,6 +37150,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 65,
         "power": 50,
@@ -27139,9 +37178,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 51
+      "compositeScore": 53
     },
     {
       "country": "Seychelles",
@@ -27158,6 +37198,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27174,9 +37226,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27193,6 +37246,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27209,9 +37274,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27228,6 +37294,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27244,9 +37322,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27263,6 +37342,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27279,9 +37370,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27298,6 +37390,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27314,9 +37418,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27333,6 +37438,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27349,9 +37466,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 49
+      "compositeScore": 52
     },
     {
       "country": "Seychelles",
@@ -27368,6 +37486,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -27384,9 +37514,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 45
+      "compositeScore": 48
     },
     {
       "country": "Seychelles",
@@ -27403,6 +37534,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -27419,9 +37562,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 46
+      "compositeScore": 49
     },
     {
       "country": "Seychelles",
@@ -27438,6 +37582,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "Port Victoria (Indian Ocean strategic; transshipment hub; near Seychelles-Mauritius zone)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 75,
         "power": 65,
@@ -27454,9 +37610,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 54
+      "compositeScore": 56
     },
     {
       "country": "Seychelles",
@@ -27473,6 +37630,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27489,9 +37658,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27508,6 +37678,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27524,9 +37706,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27543,6 +37726,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27559,9 +37754,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27578,6 +37774,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27594,9 +37802,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27613,6 +37822,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27629,9 +37850,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27648,6 +37870,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27664,9 +37898,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 49
+      "compositeScore": 52
     },
     {
       "country": "Seychelles",
@@ -27683,6 +37918,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27699,9 +37946,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27718,6 +37966,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 50,
         "power": 50,
@@ -27734,9 +37994,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 48
+      "compositeScore": 51
     },
     {
       "country": "Seychelles",
@@ -27753,6 +38014,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Medium",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical island",
+      "terrainType": "Small island, coastal",
+      "elevationRange": "0–500",
+      "avgTemperature": "25",
+      "annualRainfall": "1200",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Indian/Atlantic Ocean island",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 1,
+      "crimeLevel": "Very Low",
       "scores": {
         "infrastructure": 38,
         "power": 38,
@@ -27769,9 +38042,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 90
       },
-      "compositeScore": 46
+      "compositeScore": 49
     }
   ],
   "Sierra Leone": [
@@ -27790,6 +38064,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -27806,7 +38092,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 32
     },
@@ -27825,6 +38112,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -27841,7 +38140,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 32
     },
@@ -27860,6 +38160,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -27876,7 +38188,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 32
     },
@@ -27895,6 +38208,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -27911,7 +38236,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 33
     },
@@ -27930,6 +38256,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -27946,9 +38284,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
-      "compositeScore": 32
+      "compositeScore": 33
     },
     {
       "country": "Sierra Leone",
@@ -27965,6 +38304,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Low",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "Port of Freetown (natural harbour; container terminal)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 6,
+      "crimeLevel": "Medium",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -27981,7 +38332,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 40
       },
       "compositeScore": 33
     }
@@ -28002,6 +38354,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28018,9 +38382,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
-      "compositeScore": 30
+      "compositeScore": 29
     },
     {
       "country": "Somalia",
@@ -28037,6 +38402,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28053,9 +38430,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28072,6 +38450,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "Port of Mogadishu (rehabilitating; UAE-managed)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28088,9 +38478,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28107,6 +38498,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "Port of Bosaso (Puntland; active for trade)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28123,9 +38526,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 28
+      "compositeScore": 26
     },
     {
       "country": "Somalia",
@@ -28142,6 +38546,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28158,9 +38574,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28177,6 +38594,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28193,9 +38622,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28212,6 +38642,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28228,9 +38670,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28247,6 +38690,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28263,9 +38718,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28282,6 +38738,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28298,9 +38766,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28317,6 +38786,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "Port of Kismayo (charcoal/trade hub; improving)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28333,9 +38814,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28352,6 +38834,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28368,9 +38862,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28387,6 +38882,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28403,9 +38910,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 28
+      "compositeScore": 26
     },
     {
       "country": "Somalia",
@@ -28422,6 +38930,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28438,9 +38958,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 28
+      "compositeScore": 26
     },
     {
       "country": "Somalia",
@@ -28457,6 +38978,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28473,9 +39006,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28492,6 +39026,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28508,9 +39054,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28527,6 +39074,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Very Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 10,
+      "crimeLevel": "Very High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28543,9 +39102,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 0
       },
-      "compositeScore": 27
+      "compositeScore": 25
     },
     {
       "country": "Somalia",
@@ -28562,6 +39122,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 8,
+      "crimeLevel": "High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28578,9 +39150,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 20
       },
-      "compositeScore": 30
+      "compositeScore": 29
     },
     {
       "country": "Somalia",
@@ -28597,6 +39170,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Low",
       "multinationalPresence": "Low",
+      "climateZone": "Arid / Semi-arid",
+      "terrainType": "Desert and semi-desert plains",
+      "elevationRange": "0–1500",
+      "avgTemperature": "28",
+      "annualRainfall": "200",
+      "floodRisk": "Low",
+      "droughtRisk": "Very High",
+      "topographyNotes": "Arid to hyper-arid conditions",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28613,7 +39198,8 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 25,
-        "waterAvailability": 25
+        "waterAvailability": 25,
+        "crime": 30
       },
       "compositeScore": 30
     }
@@ -28634,6 +39220,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "Port of São Tomé (small; bunkering and fishing)",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 38,
         "power": 25,
@@ -28650,9 +39248,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 42
+      "compositeScore": 41
     },
     {
       "country": "São Tomé & Príncipe",
@@ -28669,6 +39268,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28685,9 +39296,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 40
+      "compositeScore": 39
     },
     {
       "country": "São Tomé & Príncipe",
@@ -28704,6 +39316,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28720,9 +39344,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 40
+      "compositeScore": 39
     },
     {
       "country": "São Tomé & Príncipe",
@@ -28739,6 +39364,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28755,9 +39392,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 40
+      "compositeScore": 39
     },
     {
       "country": "São Tomé & Príncipe",
@@ -28774,6 +39412,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28790,9 +39440,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 40
+      "compositeScore": 39
     },
     {
       "country": "São Tomé & Príncipe",
@@ -28809,6 +39460,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28825,9 +39488,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 40
+      "compositeScore": 39
     },
     {
       "country": "São Tomé & Príncipe",
@@ -28844,6 +39508,18 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
       "skillLevel": "Low",
       "exportOrientation": "Medium",
       "multinationalPresence": "Medium",
+      "climateZone": "Tropical humid",
+      "terrainType": "Lowland rainforest and coast",
+      "elevationRange": "0–500",
+      "avgTemperature": "26",
+      "annualRainfall": "1800",
+      "floodRisk": "Medium",
+      "droughtRisk": "Low",
+      "topographyNotes": "Equatorial rainforest zone",
+      "namedPorts": "No major port in this region",
+      "railRoutes": "Information unavailable",
+      "crimeIndex": 7,
+      "crimeLevel": "Medium–High",
       "scores": {
         "infrastructure": 25,
         "power": 25,
@@ -28860,9 +39536,10 @@ export const SUBNATIONAL_DATA: Record<string, RegionData[]> = {
         "marketAccess": 50,
         "tradeCorridor": 25,
         "incentiveReliability": 50,
-        "waterAvailability": 50
+        "waterAvailability": 50,
+        "crime": 30
       },
-      "compositeScore": 40
+      "compositeScore": 39
     }
   ]
 };

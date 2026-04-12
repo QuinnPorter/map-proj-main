@@ -84,7 +84,7 @@ export default function Landing({ onStart }: Props) {
           </button>
         </div>
 
-        <p style={{ fontSize: '0.78rem', color: '#a0aec0' }}>~3 minutes · 19 questions · No sign-up required</p>
+        <p style={{ fontSize: '0.78rem', color: '#a0aec0' }}>~4 minutes · 21–23 questions · Adaptive · No sign-up required</p>
       </div>
 
       {/* Feature cards */}
