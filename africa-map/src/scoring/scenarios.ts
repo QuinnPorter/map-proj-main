@@ -48,14 +48,6 @@ export const HISTORICAL_CRISES = [
 
 // ─── Average FDI impact by crisis type (for scenario modelling) ───────────────
 // These are averages from the historical database above, used in scenario logic
-const AVG_IMPACT_BY_TYPE = {
-  disputed_election: -40,   // avg FDI impact year after disputed election
-  coup:              -55,   // avg FDI impact after coup
-  civil_war:         -75,   // avg FDI impact in civil war year
-  debt_crisis:       -38,   // avg FDI impact in debt crisis year
-  fx_crisis:         -28,   // avg FDI impact in FX crisis
-  resource_nationalism: -35, // avg FDI impact from resource nationalism shock
-};
 
 export const SCENARIOS: Scenario[] = [
   {
