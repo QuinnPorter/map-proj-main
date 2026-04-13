@@ -67,7 +67,7 @@ export interface QuestionOption {
 
 export interface Question {
   id: string;
-  section: 'profile' | 'tradeoffs' | 'redlines' | 'importance';
+  section: 'profile' | 'tradeoffs' | 'redlines' | 'importance' | 'people' | 'infrastructure' | 'permits' | 'hedging';
   text: string;
   options: QuestionOption[];
 }
