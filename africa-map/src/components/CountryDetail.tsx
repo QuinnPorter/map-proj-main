@@ -68,7 +68,7 @@ function MetricCard({ label, value, sub }: { label: string; value: string; sub?:
 
 // ─── Live AI scan ──────────────────────────────────────────────────────────────
 
-function LiveScan({ iso, countryName }: { iso: string; countryName: string }) {
+function LiveScan({ countryName }: { iso: string; countryName: string }) {
   const [state, setState] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
   const [result, setResult] = useState<{ headline: string; sentiment: number; signals: { ministry: string; signal: string; tone: string }[]; watchlist: string } | null>(null);
 
