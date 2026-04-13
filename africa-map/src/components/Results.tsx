@@ -9,6 +9,7 @@ import TopMoversPanel from './TopMoversPanel';
 import AlgorithmPanel from './AlgorithmPanel';
 import ResearchAssistant from './ResearchAssistant';
 import LeadershipSentiment from './LeadershipSentiment';
+import CountryDetail from './CountryDetail';
 
 type MainTab = 'rankings' | 'research' | 'leadership';
 
@@ -26,6 +27,7 @@ export default function Results({ profile, onReset }: Props) {
   const [scenarioId, setScenarioId] = useState('none');
   const [compareSelected, setCompareSelected] = useState<string[]>([]);
   const [showComparePanel, setShowComparePanel] = useState(false);
+  const [selectedCountryIso, setSelectedCountryIso] = useState<string | null>(null);
 
   const baseResults = useMemo(() => scoreCountries(profile.weights, profile.filters), [profile]);
   const scenarioResults = useMemo(() => applyScenario(baseResults, scenarioId), [baseResults, scenarioId]);
@@ -68,6 +70,9 @@ export default function Results({ profile, onReset }: Props) {
     setCompareSelected(prev => prev.includes(name) ? prev.filter(n => n !== name) : prev.length < 3 ? [...prev, name] : prev);
   }
 
+  // If a country is selected, show its detail view
+  const selectedResult = selectedCountryIso ? results.find(r => r.iso === selectedCountryIso) : null;
+
   return (
     <div style={{ minHeight: '100vh', background: '#f8f9fb', fontFamily: 'inherit' }}>
 
@@ -84,22 +89,24 @@ export default function Results({ profile, onReset }: Props) {
           <span style={{ fontWeight: 700, color: '#1a2035', fontSize: '0.9rem' }}>AfriInvest Intelligence</span>
         </div>
 
-        {/* Main tabs */}
-        <div style={{ display: 'flex', gap: '0.25rem' }}>
-          {([
-            { key: 'rankings', label: '📊 Rankings' },
-            { key: 'research', label: '📚 Research' },
-            { key: 'leadership', label: '🎙️ Leadership' },
-          ] as const).map(t => (
-            <button key={t.key} onClick={() => setMainTab(t.key)} style={{
-              padding: '0.4rem 0.85rem', border: 'none',
-              background: mainTab === t.key ? '#eef2ff' : 'transparent',
-              borderRadius: 6, color: mainTab === t.key ? '#3d7be8' : '#8a9ab0',
-              fontSize: '0.8rem', fontWeight: mainTab === t.key ? 700 : 400,
-              cursor: 'pointer', fontFamily: 'inherit',
-            }}>{t.label}</button>
-          ))}
-        </div>
+        {/* Main tabs — only show when not in country detail */}
+        {!selectedResult && (
+          <div style={{ display: 'flex', gap: '0.25rem' }}>
+            {([
+              { key: 'rankings', label: '📊 Rankings' },
+              { key: 'research', label: '📚 Research' },
+              { key: 'leadership', label: '🎙️ Leadership' },
+            ] as const).map(t => (
+              <button key={t.key} onClick={() => setMainTab(t.key)} style={{
+                padding: '0.4rem 0.85rem', border: 'none',
+                background: mainTab === t.key ? '#eef2ff' : 'transparent',
+                borderRadius: 6, color: mainTab === t.key ? '#3d7be8' : '#8a9ab0',
+                fontSize: '0.8rem', fontWeight: mainTab === t.key ? 700 : 400,
+                cursor: 'pointer', fontFamily: 'inherit',
+              }}>{t.label}</button>
+            ))}
+          </div>
+        )}
 
         <button onClick={onReset} style={{
           background: 'none', border: '1px solid #e2e6ea', borderRadius: 6,
@@ -110,8 +117,19 @@ export default function Results({ profile, onReset }: Props) {
 
       <div style={{ maxWidth: 740, margin: '0 auto', padding: '1.5rem 1rem' }}>
 
+        {/* ── Country detail view ── */}
+        {selectedResult && (
+          <CountryDetail
+            result={selectedResult}
+            profile={profile}
+            allResults={results}
+            onBack={() => setSelectedCountryIso(null)}
+            onNavigateTo={(iso) => setSelectedCountryIso(iso)}
+          />
+        )}
+
         {/* ── Rankings tab ── */}
-        {mainTab === 'rankings' && (
+        {!selectedResult && mainTab === 'rankings' && (
           <>
             {/* Profile summary */}
             <div style={{ background: '#fff', border: '1px solid #e2e6ea', borderRadius: 10, padding: '0.85rem 1.1rem', marginBottom: '1.1rem', boxShadow: '0 1px 4px rgba(0,0,0,0.05)' }}>
@@ -184,10 +202,11 @@ export default function Results({ profile, onReset }: Props) {
               </div>
               <div style={{ display: 'flex', gap: '0.65rem', flexWrap: 'wrap' }}>
                 {top3.map((r, i) => (
-                  <div key={r.name} style={{ flex: '1 1 150px', background: i === 0 ? '#eef2ff' : '#f8f9fb', border: `1px solid ${i === 0 ? '#c7d7f8' : '#e2e6ea'}`, borderRadius: 8, padding: '0.65rem 0.85rem' }}>
+                  <div key={r.name} onClick={() => setSelectedCountryIso(r.iso)} style={{ flex: '1 1 150px', background: i === 0 ? '#eef2ff' : '#f8f9fb', border: `1px solid ${i === 0 ? '#c7d7f8' : '#e2e6ea'}`, borderRadius: 8, padding: '0.65rem 0.85rem', cursor: 'pointer' }}>
                     <div style={{ fontSize: '0.7rem', color: '#3d7be8', fontWeight: 700 }}>#{i + 1}</div>
                     <div style={{ fontWeight: 700, color: '#1a2035', fontSize: '1rem' }}>{r.name}</div>
                     <div style={{ fontSize: '0.73rem', color: '#6b7280' }}>{showCustom ? r.customScore : r.defaultScore}/100</div>
+                    <div style={{ fontSize: '0.68rem', color: '#3d7be8', marginTop: 2 }}>View detail →</div>
                   </div>
                 ))}
               </div>
@@ -210,21 +229,30 @@ export default function Results({ profile, onReset }: Props) {
               )}
             </div>
 
-            {/* Country list */}
+            {/* Country list — clickable to open detail */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
               {displayed.map(r => (
-                <CountryCard key={r.name} result={r} showCustom={showCustom} isSelected={compareSelected.includes(r.name)} onToggleCompare={toggleCompare} canAddCompare={compareSelected.length < 3} weights={profile.weights} />
+                <div key={r.name} onClick={() => setSelectedCountryIso(r.iso)} style={{ cursor: 'pointer' }}>
+                  <CountryCard
+                    result={r}
+                    showCustom={showCustom}
+                    isSelected={compareSelected.includes(r.name)}
+                    onToggleCompare={(name: string) => { toggleCompare(name); }}
+                    canAddCompare={compareSelected.length < 3}
+                    weights={profile.weights}
+                  />
+                </div>
               ))}
             </div>
 
             <div style={{ marginTop: '2rem', padding: '1rem 1.1rem', background: '#fff', border: '1px solid #e2e6ea', borderRadius: 8, fontSize: '0.72rem', color: '#a0aec0', lineHeight: 1.6 }}>
-              <strong style={{ color: '#8a9ab0' }}>Methodology:</strong> Political stability, rule of law, and growth pillars use national-level data (V-Dem, World Bank WGI, TI CPI, Freedom House, Numbeo 2026). Infrastructure uses subnational data where available (34/54 countries). FX, macro, and market depth pillars are pending. Click 📚 inside any pillar for academic sources. Scenario adjustments are evidence-informed estimates.
+              <strong style={{ color: '#8a9ab0' }}>Methodology:</strong> Political stability, rule of law, and growth pillars use national-level data (V-Dem, World Bank WGI, TI CPI, Freedom House, Numbeo 2026). Infrastructure uses subnational data where available (34/54 countries). FX, macro, and market depth pillars are pending. Click 📚 inside any pillar for academic sources. Scenario adjustments are evidence-informed estimates. Click any country for ministry routing, AI outreach strategy, and hedge recommendations.
             </div>
           </>
         )}
 
         {/* ── Research tab ── */}
-        {mainTab === 'research' && (
+        {!selectedResult && mainTab === 'research' && (
           <div style={{ background: '#fff', border: '1px solid #e2e6ea', borderRadius: 10, padding: '1.25rem', boxShadow: '0 1px 4px rgba(0,0,0,0.05)' }}>
             <h2 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem', fontWeight: 700, color: '#1a2035' }}>Research Assistant</h2>
             <p style={{ margin: '0 0 1.25rem', fontSize: '0.82rem', color: '#6b7280', lineHeight: 1.5 }}>
@@ -235,7 +263,7 @@ export default function Results({ profile, onReset }: Props) {
         )}
 
         {/* ── Leadership tab ── */}
-        {mainTab === 'leadership' && (
+        {!selectedResult && mainTab === 'leadership' && (
           <div style={{ background: '#fff', border: '1px solid #e2e6ea', borderRadius: 10, padding: '1.25rem', boxShadow: '0 1px 4px rgba(0,0,0,0.05)' }}>
             <h2 style={{ margin: '0 0 0.5rem', fontSize: '1.1rem', fontWeight: 700, color: '#1a2035' }}>Leadership Sentiment Analyser</h2>
             <p style={{ margin: '0 0 1.25rem', fontSize: '0.82rem', color: '#6b7280', lineHeight: 1.5 }}>
