@@ -216,7 +216,136 @@ export const QUESTIONS: Question[] = [
     ],
   },
 
-  // ── Section 4: Importance ranking ──────────────────────────────────────────
+  // ── Section 4: People & talent ─────────────────────────────────────────────
+  {
+    id: 'talentAccess',
+    section: 'people',
+    text: 'How important is access to university-educated local talent?',
+    options: [
+      { value: 'critical', label: 'Critical — we need a strong graduate pipeline on the ground' },
+      { value: 'important', label: 'Important — we prefer it' },
+      { value: 'useful', label: 'Useful but not a deciding factor' },
+      { value: 'notNeeded', label: 'Not important for our operating model' },
+    ],
+  },
+  {
+    id: 'workforceType',
+    section: 'people',
+    text: 'What type of local workforce does your investment primarily need?',
+    options: [
+      { value: 'graduate', label: 'Highly skilled / graduate professionals' },
+      { value: 'technical', label: 'Technical / vocational skills' },
+      { value: 'semiskilled', label: 'Semi-skilled / operational labour' },
+      { value: 'minimal', label: 'Minimal local workforce — remote or capital-light model' },
+    ],
+  },
+  {
+    id: 'fdiOpenness',
+    section: 'people',
+    text: 'How important is the country\'s openness to foreign investors and expat staff?',
+    options: [
+      { value: 'veryImportant', label: 'Very important — we need a welcoming environment' },
+      { value: 'important', label: 'Important but manageable' },
+      { value: 'canNavigate', label: 'We can navigate friction if the opportunity is strong' },
+      { value: 'notConcern', label: 'Not a major concern for our structure' },
+    ],
+  },
+
+  // ── Section 5: Infrastructure ──────────────────────────────────────────────
+  {
+    id: 'powerReliability',
+    section: 'infrastructure',
+    text: 'How critical is reliable power supply — no loadshedding — to your operations?',
+    options: [
+      { value: 'critical', label: 'Critical — outages would halt our operations' },
+      { value: 'important', label: 'Important — we need mostly reliable power' },
+      { value: 'manageable', label: 'Manageable — we can run backup generation' },
+      { value: 'irrelevant', label: 'Not relevant to our investment model' },
+    ],
+  },
+  {
+    id: 'logisticsImportance',
+    section: 'infrastructure',
+    text: 'How important is logistics quality — ports, roads, rail — to your strategy?',
+    options: [
+      { value: 'essential', label: 'Essential — we depend on export or import corridors' },
+      { value: 'important', label: 'Important' },
+      { value: 'useful', label: 'Useful but not a deciding factor' },
+      { value: 'notRelevant', label: 'Not relevant to our model' },
+    ],
+  },
+  {
+    id: 'sezRelevance',
+    section: 'infrastructure',
+    text: 'Would access to a Special Economic Zone (SEZ) be relevant to your investment?',
+    options: [
+      { value: 'essential', label: 'Yes — essential for our operating model' },
+      { value: 'helpful', label: 'Helpful but not critical' },
+      { value: 'notRelevant', label: 'Not particularly relevant' },
+      { value: 'unsure', label: 'Unsure at this stage' },
+    ],
+  },
+
+  // ── Section 6: Permits & governance ───────────────────────────────────────
+  {
+    id: 'approvalTolerance',
+    section: 'permits',
+    text: 'What is the maximum approval timeline you can tolerate to enter a market?',
+    options: [
+      { value: 'under3', label: 'Under 3 months' },
+      { value: 'under6', label: '3–6 months' },
+      { value: 'under12', label: '6–12 months' },
+      { value: 'over12', label: 'Over 12 months if the opportunity justifies it' },
+    ],
+  },
+  {
+    id: 'judicialImportance',
+    section: 'permits',
+    text: 'How important is judicial independence to your investment decision?',
+    options: [
+      { value: 'essential', label: 'Essential — weak courts are a dealbreaker' },
+      { value: 'veryImportant', label: 'Very important' },
+      { value: 'important', label: 'Important but not a dealbreaker' },
+      { value: 'lessImportant', label: 'Less important for our structure' },
+    ],
+  },
+  {
+    id: 'bureaucracyTolerance',
+    section: 'permits',
+    text: 'How much bureaucratic friction can your team absorb?',
+    options: [
+      { value: 'veryLittle', label: 'Very little — we need efficient, streamlined approvals' },
+      { value: 'moderate', label: 'Moderate friction is manageable' },
+      { value: 'experienced', label: 'We are experienced with complex jurisdictions' },
+      { value: 'highOk', label: 'High friction is acceptable for the right return' },
+    ],
+  },
+
+  // ── Section 7: Hedging ─────────────────────────────────────────────────────
+  {
+    id: 'hedgeInterest',
+    section: 'hedging',
+    text: 'Are you open to a multi-country strategy to diversify risk?',
+    options: [
+      { value: 'yes', label: 'Yes — this is important to my strategy' },
+      { value: 'possibly', label: 'Possibly — show me the options' },
+      { value: 'no', label: 'No — single-country focus for now' },
+    ],
+  },
+  {
+    id: 'hedgeType',
+    section: 'hedging',
+    text: 'If hedging, what type of risk are you most looking to offset?',
+    options: [
+      { value: 'political', label: 'Political / governance risk' },
+      { value: 'fx', label: 'FX / capital mobility risk' },
+      { value: 'power', label: 'Power / infrastructure risk' },
+      { value: 'approval', label: 'Approval / bureaucracy risk' },
+      { value: 'all', label: 'All of the above' },
+    ],
+  },
+
+  // ── Section 8: Importance ranking ──────────────────────────────────────────
   {
     id: 'mostImportantFactor',
     section: 'importance',
@@ -261,7 +390,6 @@ const BASE_WEIGHTS: Record<string, PillarWeights> = {
   default:   { political: 14, ruleOfLaw: 16, fx: 13, macro: 12, marketDepth: 13, infrastructure: 11, growth: 12, businessEnv: 9  },
 };
 
-// Sector overlays — adjust base weights for sector-specific concerns
 const SECTOR_ADJUSTMENTS: Record<string, Partial<PillarWeights>> = {
   infrastructure: { infrastructure: +8, fx: +4, macro: -4, marketDepth: -8 },
   fintech:        { ruleOfLaw: +6, marketDepth: +6, infrastructure: -4, macro: -4, growth: -4 },
@@ -298,16 +426,16 @@ export function deriveProfile(answers: Answers): InvestorProfile {
   if (answers.returnPreference === 'preserve') { w.political += 5; w.ruleOfLaw += 3; w.growth -= 8; }
   if (answers.returnPreference === 'longterm') { w.growth += 8; w.political -= 5; w.macro -= 3; }
 
-  // Currency preference — hard currency requirement boosts FX pillar
+  // Currency preference
   if (answers.currencyPreference === 'hardRequired') { w.fx += 8; w.growth -= 8; }
   if (answers.currencyPreference === 'hardPreferred') { w.fx += 4; w.growth -= 4; }
   if (answers.currencyPreference === 'localOk')       { w.fx -= 4; w.growth += 4; }
 
-  // Ownership structure — majority stake = more governance sensitivity
+  // Ownership structure
   if (answers.ownershipStructure === 'majority')   { w.ruleOfLaw += 5; w.political += 3; w.marketDepth -= 8; }
   if (answers.ownershipStructure === 'minority')   { w.marketDepth += 5; w.ruleOfLaw -= 5; }
 
-  // Local partner — if essential, reduces infrastructure weight (partner handles it)
+  // Local partner
   if (answers.localPartner === 'essential')  { w.infrastructure -= 4; w.ruleOfLaw += 4; }
   if (answers.localPartner === 'notNeeded')  { w.infrastructure += 4; w.ruleOfLaw -= 4; }
 
@@ -323,7 +451,25 @@ export function deriveProfile(answers: Answers): InvestorProfile {
   if (answers.riskTolerance === 'stability') { w.political += 5; w.macro += 3; w.growth -= 8; }
   if (answers.riskTolerance === 'upside')    { w.growth += 8; w.political -= 5; w.macro -= 3; }
 
-  // Importance ranking — most important gets a final +8 boost, least important -8
+  // People & talent
+  if (answers.talentAccess === 'critical')   { w.infrastructure += 4; w.growth += 3; w.macro -= 7; }
+  if (answers.workforceType === 'graduate')  { w.growth += 3; w.infrastructure += 3; w.macro -= 6; }
+  if (answers.fdiOpenness === 'veryImportant') { w.political += 3; w.ruleOfLaw += 3; w.growth -= 6; }
+
+  // Infrastructure
+  if (answers.powerReliability === 'critical')    { w.infrastructure += 7; w.growth -= 7; }
+  if (answers.powerReliability === 'manageable')  { w.infrastructure -= 3; w.growth += 3; }
+  if (answers.logisticsImportance === 'essential') { w.infrastructure += 5; w.marketDepth -= 5; }
+  if (answers.sezRelevance === 'essential')        { w.infrastructure += 3; w.ruleOfLaw += 2; w.growth -= 5; }
+
+  // Permits & governance
+  if (answers.approvalTolerance === 'under3')   { w.ruleOfLaw += 4; w.marketDepth += 3; w.growth -= 7; }
+  if (answers.approvalTolerance === 'over12')   { w.growth += 5; w.ruleOfLaw -= 5; }
+  if (answers.judicialImportance === 'essential') { w.ruleOfLaw += 6; w.growth -= 6; }
+  if (answers.judicialImportance === 'lessImportant') { w.ruleOfLaw -= 4; w.growth += 4; }
+  if (answers.bureaucracyTolerance === 'veryLittle') { w.ruleOfLaw += 3; w.infrastructure += 3; w.growth -= 6; }
+
+  // Importance ranking
   if (answers.mostImportantFactor && answers.mostImportantFactor in w) {
     (w as Record<string, number>)[answers.mostImportantFactor] += 8;
   }
@@ -331,7 +477,7 @@ export function deriveProfile(answers: Answers): InvestorProfile {
     (w as Record<string, number>)[answers.leastImportantFactor] -= 8;
   }
 
-  // ESG — positive impact requirement boosts governance and rule of law
+  // ESG
   if (answers.esgConstraints === 'strict' || answers.esgConstraints === 'positiveImpact') {
     w.ruleOfLaw += 4; w.political += 3; w.growth -= 7;
   }
@@ -369,7 +515,6 @@ export function deriveProfile(answers: Answers): InvestorProfile {
   };
   const label = `${typeLabels[type] ?? 'Investor'}${sectorLabels[sector] ?? ''} · ${horizonLabels[answers.horizon] ?? 'undefined'} horizon`;
 
-  // Build description
   const sorted = [...keys].sort((a, b) => w[b] - w[a]);
   const pillarNames: Record<string, string> = {
     political: 'political stability', ruleOfLaw: 'rule of law', fx: 'capital mobility',
@@ -377,13 +522,12 @@ export function deriveProfile(answers: Answers): InvestorProfile {
   };
   const description = `Prioritises ${pillarNames[sorted[0]]}, ${pillarNames[sorted[1]]}, and ${pillarNames[sorted[2]]}.`;
 
-  // Build answer trace for algorithm explanation
   const answerTrace = buildAnswerTrace(answers, w);
 
   return { weights: w, filters, label, description, answerTrace, answers };
 }
 
-// ─── Answer trace for algorithm explanation ───────────────────────────────────
+// ─── Answer trace ─────────────────────────────────────────────────────────────
 
 export interface AnswerTraceItem {
   questionText: string;
@@ -404,6 +548,12 @@ function buildAnswerTrace(answers: Answers, _finalWeights: PillarWeights): Answe
     riskTolerance: 'Risk tolerance', esgConstraints: 'ESG constraints',
     capitalControls: 'Capital controls red line', contractEnforcement: 'Contract enforcement red line',
     politicalDisruption: 'Political disruption tolerance',
+    talentAccess: 'Talent access importance', workforceType: 'Workforce type needed',
+    fdiOpenness: 'Openness to foreign investors', powerReliability: 'Power reliability importance',
+    logisticsImportance: 'Logistics quality importance', sezRelevance: 'SEZ relevance',
+    approvalTolerance: 'Approval timeline tolerance', judicialImportance: 'Judicial independence',
+    bureaucracyTolerance: 'Bureaucratic friction tolerance',
+    hedgeInterest: 'Multi-country strategy interest', hedgeType: 'Hedge risk type',
     mostImportantFactor: 'Most important factor', leastImportantFactor: 'Least important factor',
   };
 
@@ -433,6 +583,21 @@ function buildAnswerTrace(answers: Answers, _finalWeights: PillarWeights): Answe
       stability: [{ pillar: 'Political', delta: +5 }, { pillar: 'Macro', delta: +3 }, { pillar: 'Growth', delta: -8 }],
       upside:    [{ pillar: 'Growth', delta: +8 }, { pillar: 'Political', delta: -5 }, { pillar: 'Macro', delta: -3 }],
     },
+    powerReliability: {
+      critical:   [{ pillar: 'Infrastructure', delta: +7 }, { pillar: 'Growth', delta: -7 }],
+      manageable: [{ pillar: 'Infrastructure', delta: -3 }, { pillar: 'Growth', delta: +3 }],
+    },
+    logisticsImportance: {
+      essential: [{ pillar: 'Infrastructure', delta: +5 }, { pillar: 'Market Depth', delta: -5 }],
+    },
+    judicialImportance: {
+      essential:      [{ pillar: 'Rule of Law', delta: +6 }, { pillar: 'Growth', delta: -6 }],
+      lessImportant:  [{ pillar: 'Rule of Law', delta: -4 }, { pillar: 'Growth', delta: +4 }],
+    },
+    approvalTolerance: {
+      under3: [{ pillar: 'Rule of Law', delta: +4 }, { pillar: 'Market Depth', delta: +3 }, { pillar: 'Growth', delta: -7 }],
+      over12: [{ pillar: 'Growth', delta: +5 }, { pillar: 'Rule of Law', delta: -5 }],
+    },
     mostImportantFactor: {
       political:     [{ pillar: 'Political', delta: +8 }],
       ruleOfLaw:     [{ pillar: 'Rule of Law', delta: +8 }],
@@ -455,9 +620,6 @@ function buildAnswerTrace(answers: Answers, _finalWeights: PillarWeights): Answe
     },
   };
 
-  // Get label for an answer value
-  const QUESTIONS_MAP: Record<string, Record<string, string>> = {};
-  // Build from QUESTIONS array (imported inline to avoid circular)
   const qTexts: Record<string, string[][]> = {
     investorType: [['public','Public markets'],['pe','Private equity'],['venture','Venture/growth'],['corporate','Strategic corporate'],['credit','Private credit'],['impact','Impact investor']],
     sectorFocus: [['diversified','Diversified'],['infrastructure','Infrastructure'],['fintech','Fintech'],['agri','Agriculture'],['manufacturing','Manufacturing'],['realestate','Real estate'],['extractives','Extractives'],['tech','Technology']],
@@ -476,10 +638,22 @@ function buildAnswerTrace(answers: Answers, _finalWeights: PillarWeights): Answe
     capitalControls: [['yes','Yes — red line'],['usually','Usually yes'],['sometimes','Sometimes'],['no','No']],
     contractEnforcement: [['yes','Yes — red line'],['usually','Usually yes'],['sometimes','Sometimes'],['no','No']],
     politicalDisruption: [['veryLow','Very little'],['moderate','Moderate'],['high','High if returns justify']],
+    talentAccess: [['critical','Critical'],['important','Important'],['useful','Useful'],['notNeeded','Not needed']],
+    workforceType: [['graduate','Graduate professionals'],['technical','Technical/vocational'],['semiskilled','Semi-skilled'],['minimal','Minimal workforce']],
+    fdiOpenness: [['veryImportant','Very important'],['important','Important'],['canNavigate','Can navigate friction'],['notConcern','Not a concern']],
+    powerReliability: [['critical','Critical'],['important','Important'],['manageable','Manageable'],['irrelevant','Not relevant']],
+    logisticsImportance: [['essential','Essential'],['important','Important'],['useful','Useful'],['notRelevant','Not relevant']],
+    sezRelevance: [['essential','Essential'],['helpful','Helpful'],['notRelevant','Not relevant'],['unsure','Unsure']],
+    approvalTolerance: [['under3','Under 3 months'],['under6','3–6 months'],['under12','6–12 months'],['over12','Over 12 months']],
+    judicialImportance: [['essential','Essential'],['veryImportant','Very important'],['important','Important'],['lessImportant','Less important']],
+    bureaucracyTolerance: [['veryLittle','Very little'],['moderate','Moderate'],['experienced','Experienced'],['highOk','High OK']],
+    hedgeInterest: [['yes','Yes — important'],['possibly','Possibly'],['no','No']],
+    hedgeType: [['political','Political/governance'],['fx','FX/capital'],['power','Power/infrastructure'],['approval','Approval/bureaucracy'],['all','All of the above']],
     mostImportantFactor: [['political','Political stability'],['ruleOfLaw','Rule of law'],['fx','Capital mobility'],['macro','Macro stability'],['marketDepth','Market depth'],['infrastructure','Infrastructure'],['growth','Growth']],
     leastImportantFactor: [['political','Political stability'],['ruleOfLaw','Rule of law'],['fx','Capital mobility'],['macro','Macro stability'],['marketDepth','Market depth'],['infrastructure','Infrastructure'],['growth','Growth']],
   };
 
+  const QUESTIONS_MAP: Record<string, Record<string, string>> = {};
   Object.entries(qTexts).forEach(([qId, pairs]) => {
     QUESTIONS_MAP[qId] = Object.fromEntries(pairs);
   });

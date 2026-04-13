@@ -23,6 +23,17 @@ const QUESTION_PILLAR_IMPACT: Record<string, { pillarId: string }[]> = {
   politicalDisruption:    [{ pillarId: 'political' }],
   sanctionsFilter:        [{ pillarId: 'businessEnv' }],
   nationalisationFilter:  [{ pillarId: 'businessEnv' }],
+  talentAccess:           [{ pillarId: 'infrastructure' }, { pillarId: 'growth' }],
+  workforceType:          [{ pillarId: 'infrastructure' }, { pillarId: 'growth' }],
+  fdiOpenness:            [{ pillarId: 'political' }, { pillarId: 'ruleOfLaw' }],
+  powerReliability:       [{ pillarId: 'infrastructure' }],
+  logisticsImportance:    [{ pillarId: 'infrastructure' }, { pillarId: 'marketDepth' }],
+  sezRelevance:           [{ pillarId: 'infrastructure' }],
+  approvalTolerance:      [{ pillarId: 'ruleOfLaw' }, { pillarId: 'marketDepth' }],
+  judicialImportance:     [{ pillarId: 'ruleOfLaw' }],
+  bureaucracyTolerance:   [{ pillarId: 'ruleOfLaw' }, { pillarId: 'infrastructure' }],
+  hedgeInterest:          [],
+  hedgeType:              [],
   mostImportantFactor:    [{ pillarId: 'political' }, { pillarId: 'ruleOfLaw' }, { pillarId: 'growth' }],
   leastImportantFactor:   [{ pillarId: 'political' }, { pillarId: 'ruleOfLaw' }, { pillarId: 'growth' }],
 };
@@ -31,10 +42,14 @@ const SECTION_LABELS: Record<string, string> = {
   profile: 'Your investor profile',
   tradeoffs: 'Your priorities',
   redlines: 'Your constraints',
+  people: 'People & talent',
+  infrastructure: 'Infrastructure',
+  permits: 'Permits & governance',
+  hedging: 'Hedging & diversification',
   importance: 'What matters most',
 };
 
-const SECTION_ORDER = ['profile', 'tradeoffs', 'redlines', 'importance'];
+const SECTION_ORDER = ['profile', 'tradeoffs', 'redlines', 'people', 'infrastructure', 'permits', 'hedging', 'importance'];
 
 interface AdaptiveQuestion {
   id: string;
@@ -139,7 +154,7 @@ export default function Questionnaire({ onComplete, onBack }: Props) {
 
   const prevSection = !inAdaptive && current > 0 ? QUESTIONS[current - 1].section : null;
   const showSectionHeader = !inAdaptive && q && q.section !== prevSection;
-  const sectionIdx = q ? SECTION_ORDER.indexOf(q.section) + 1 : 5;
+  const sectionIdx = q ? SECTION_ORDER.indexOf(q.section) + 1 : SECTION_ORDER.length + 1;
   const impacts = q ? (QUESTION_PILLAR_IMPACT[q.id] ?? []) : aq ? [{ pillarId: aq.pillarId }] : [];
 
   // Trigger adaptive generation after first section (8 profile questions)
@@ -173,7 +188,6 @@ export default function Questionnaire({ onComplete, onBack }: Props) {
         } else if (adaptiveLoaded) {
           setTimeout(() => onComplete(newAnswers), 150);
         } else {
-          // Wait for adaptive to load
           const wait = setInterval(() => {
             if (!adaptiveLoading) {
               clearInterval(wait);
