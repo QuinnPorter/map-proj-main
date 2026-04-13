@@ -86,7 +86,7 @@ export default function Results({ profile, onReset }: Props) {
           <div style={{ width: 28, height: 28, borderRadius: 6, background: '#3d7be8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <span style={{ color: '#fff', fontSize: '0.75rem', fontWeight: 800 }}>A</span>
           </div>
-          <span style={{ fontWeight: 700, color: '#1a2035', fontSize: '0.9rem' }}>AfriInvest Intelligence</span>
+          <span style={{ fontWeight: 700, color: '#1a2035', fontSize: '0.9rem' }}>Meridian Analytica</span>
         </div>
 
         {/* Main tabs — only show when not in country detail */}

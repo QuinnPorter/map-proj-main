@@ -23,7 +23,7 @@ export default function Landing({ onStart }: Props) {
           <div style={{ width: 28, height: 28, borderRadius: 6, background: '#3d7be8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <span style={{ color: '#fff', fontSize: '0.75rem', fontWeight: 800 }}>A</span>
           </div>
-          <span style={{ fontWeight: 700, color: '#1a2035', fontSize: '0.9rem' }}>AfriInvest Intelligence</span>
+          <span style={{ fontWeight: 700, color: '#1a2035', fontSize: '0.9rem' }}>Meridian Analytica</span>
         </div>
         <button onClick={onStart} style={{
           padding: '0.45rem 1.1rem', background: '#3d7be8', border: 'none',
@@ -84,7 +84,7 @@ export default function Landing({ onStart }: Props) {
           </button>
         </div>
 
-        <p style={{ fontSize: '0.78rem', color: '#a0aec0' }}>~4 minutes · 21–23 questions · Adaptive · No sign-up required</p>
+        <p style={{ fontSize: '0.78rem', color: '#a0aec0' }}>~4 minutes · 32 questions · Adaptive · No sign-up required</p>
       </div>
 
       {/* Feature cards */}
