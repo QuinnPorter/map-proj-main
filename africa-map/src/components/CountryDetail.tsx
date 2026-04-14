@@ -12,6 +12,7 @@ interface Props {
   allResults: CountryResult[];
   onBack: () => void;
   onNavigateTo: (iso: string) => void;
+  weights?: unknown;
 }
 
 const SECTOR_LABEL: Record<string, string> = {
