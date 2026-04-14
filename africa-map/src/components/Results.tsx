@@ -234,7 +234,7 @@ export default function Results({ profile, onReset }: Props) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
               {displayed.map(r => (
                 <div key={r.name} onClick={() => setSelectedCountryIso(r.iso)} style={{ cursor: 'pointer' }}>
-                  <CountryCard
+                  <CountryCard weights={profile.weights}
                     result={r}
                     showCustom={showCustom}
                     isSelected={compareSelected.includes(r.name)}
