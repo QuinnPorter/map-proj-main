@@ -12,7 +12,7 @@ interface Props {
   allResults: CountryResult[];
   onBack: () => void;
   onNavigateTo: (iso: string) => void;
-  weights?: unknown;
+  weights?: import("../types").PillarWeights;
 }
 
 const SECTOR_LABEL: Record<string, string> = {
