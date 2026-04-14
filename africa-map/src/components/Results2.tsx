@@ -123,7 +123,6 @@ export default function Results({ profile, onReset }: Props) {
             result={selectedResult}
             profile={profile}
             allResults={results}
-            weights={profile.weights}
             onBack={() => setSelectedCountryIso(null)}
             onNavigateTo={(iso) => setSelectedCountryIso(iso)}
           />
