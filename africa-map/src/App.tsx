@@ -3,7 +3,7 @@ import type { AppState, Answers, InvestorProfile } from './types';
 import { deriveProfile } from './scoring/questions';
 import Landing from './components/Landing';
 import Questionnaire from './components/Questionnaire';
-import Results from './components/Results';
+import Results from './components/Results2';
 
 export default function App() {
   const [appState, setAppState] = useState<AppState>('landing');
